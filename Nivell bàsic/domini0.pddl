@@ -2,22 +2,21 @@
 
 (define (domain llibresnivell1)
 
-(:requirements :strips :fluents :typing :adl)
+(:requirements :strips :fluents  :adl)
+
 
 ;Predicats      [predecessor -> ?x és predecessor d'?y]...
 (:predicates
-    (delCataleg ?x)     (predecessor ?x ?y)
-    (parallel ?x ?y)    (llegit ?x)
-    (perllegir ?x)      (llibrecurt ?x)
-    (llibrenormal ?x)   (llibrellarg ?x)
+    (delCataleg ?ll)     (predecessor ?ll1 ?ll2)
+    (llegit ?ll)
 )
 
 
 ;actions
-(:action action_name
-    :parameters ()
-    :precondition (and )
-    :effect (and )
+(:action legirllibre
+  :parameters (?ll)
+  :precondition (and (delCataleg ?ll) (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p))))))
+  :effect (and (llegit ?ll))
 )
 
 )
