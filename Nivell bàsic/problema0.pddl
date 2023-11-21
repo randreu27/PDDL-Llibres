@@ -2,35 +2,50 @@
   (:domain llibresnivell1)
   
   (:objects
-    llibre1 llibre2 llibre3 llibre4 llibre5 llibre6 llibre7 llibre8 llibre9 llibre10
+    HP_I_La_Pedra_Filosofal               HP_I_La_Cambra_Secreta 
+    HP_I_El_Pres_De_Azkaban               HP_I_El_Calze_De_foc
+    HP_I_La_Ordre_Del_Fenix               HP_I_El_Misteri_Del_Princep
+    HP_I_Les_Reliquies_De_La_Mort_Part1   HP_I_Les_Reliquies_De_La_Mort_Part2
+
+    PJ_El_Lladre_Del_Llampec              PJ_El_Mar_Dels_Monstres
+    PJ_La_Malediccio_Del_Tita             PJ_La_Batalla_Del_Laberint
+    PJ_L_Ultim_Heroi_De_L_Olimp
   )
   
   (:init
-    (delCataleg llibre1)
-    (delCataleg llibre2)
-    (delCataleg llibre3)
-    (delCataleg llibre4)
-    (delCataleg llibre5)
-    (delCataleg llibre6)
-    (delCataleg llibre7)
-    (delCataleg llibre8)
-    (delCataleg llibre9)
-    (delCataleg llibre10)
-    (predecessor llibre1 llibre2)
-    (predecessor llibre1 llibre3)
-    (predecessor llibre2 llibre4)
-    (predecessor llibre2 llibre5)
-    (predecessor llibre3 llibre6)
-    (predecessor llibre4 llibre7)
-    (predecessor llibre4 llibre8)
-    (predecessor llibre5 llibre9)
-    (predecessor llibre6 llibre10)
+    (delCataleg HP_I_La_Pedra_Filosofal)
+    (delCataleg HP_I_La_Cambra_Secreta)
+    (delCataleg HP_I_El_Pres_De_Azkaban)
+    (delCataleg HP_I_El_Calze_De_foc)
+    (delCataleg HP_I_La_Ordre_Del_Fenix)
+    (delCataleg HP_I_El_Misteri_Del_Princep)
+    (delCataleg HP_I_Les_Reliquies_De_La_Mort_Part1)
+    (delCataleg HP_I_Les_Reliquies_De_La_Mort_Part2)
+
+    (delCataleg PJ_El_Lladre_Del_Llampec)
+    (delCataleg PJ_El_Mar_Dels_Monstres)
+    (delCataleg PJ_La_Malediccio_Del_Tita)
+    (delCataleg PJ_La_Batalla_Del_Laberint)
+    (delCataleg PJ_L_Ultim_Heroi_De_L_Olimp)
+
+    (predecessor HP_I_La_Pedra_Filosofal HP_I_La_Cambra_Secreta)
+    (predecessor HP_I_La_Cambra_Secreta HP_I_El_Pres_De_Azkaban)
+    (predecessor HP_I_El_Pres_De_Azkaban HP_I_El_Calze_De_foc)
+    (predecessor HP_I_El_Calze_De_foc HP_I_La_Ordre_Del_Fenix)
+    (predecessor HP_I_La_Ordre_Del_Fenix HP_I_El_Misteri_Del_Princep)
+    (predecessor HP_I_El_Misteri_Del_Princep HP_I_Les_Reliquies_De_La_Mort_Part1)
+    (predecessor HP_I_Les_Reliquies_De_La_Mort_Part1 HP_I_Les_Reliquies_De_La_Mort_Part2)
+
+    (predecessor PJ_El_Lladre_Del_Llampec PJ_El_Mar_Dels_Monstres)
+    (predecessor PJ_El_Mar_Dels_Monstres PJ_La_Malediccio_Del_Tita)
+    (predecessor PJ_La_Malediccio_Del_Tita PJ_La_Batalla_Del_Laberint)
+    (predecessor PJ_La_Batalla_Del_Laberint PJ_L_Ultim_Heroi_De_L_Olimp)
   )
   
   (:goal
     (and
-      (llegit llibre10)
-      (llegit llibre9)
+      (llegit HP_I_Les_Reliquies_De_La_Mort_Part2)
+      (llegit PJ_L_Ultim_Heroi_De_L_Olimp)
     )
   )
 )
