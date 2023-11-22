@@ -2,6 +2,7 @@
   (:domain llibresnivell1)
   
   (:objects
+    ;Exemple Encadenat
     HP_I_La_Pedra_Filosofal               HP_I_La_Cambra_Secreta 
     HP_I_El_Pres_De_Azkaban               HP_I_El_Calze_De_foc
     HP_I_La_Ordre_Del_Fenix               HP_I_El_Misteri_Del_Princep
@@ -10,6 +11,8 @@
     PJ_El_Lladre_Del_Llampec              PJ_El_Mar_Dels_Monstres
     PJ_La_Malediccio_Del_Tita             PJ_La_Batalla_Del_Laberint
     PJ_L_Ultim_Heroi_De_L_Olimp
+
+    ;Exemple Precessors alternatiu (Arbre invertit)
   )
   
   (:init

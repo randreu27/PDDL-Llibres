@@ -19,12 +19,12 @@
 ;(not (and (exists (?jallegit1) (llegit ?jallegit1 ?m)) (exists (?jallegit2) (llegit ?jallegit2 ?m))))
 (:action llegirllibre
   :parameters (?ll)
-  :precondition (and (delCataleg ?ll) (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?ll))))))
+  :precondition (and (delCataleg ?ll) (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p))))))
   :effect (and (llegit ?ll))
 )
 
-(:action AugmentarMes
-    :parameters ()
+(:action CanviarMes
+    :parameters (?ll)
     :precondition (and (exists (?ll) (llegit ?ll)))
     :effect (and (increase (MesActual) 1))
 )
