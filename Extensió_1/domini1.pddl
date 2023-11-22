@@ -1,4 +1,4 @@
-;Extenció 1
+;Extensió 1
 
 (define (domain llibresnivell1)
 
