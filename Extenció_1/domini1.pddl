@@ -2,24 +2,32 @@
 
 (define (domain llibresnivell1)
 
-(:requirements :strips :fluents :typing :adl)
+(:requirements :strips :fluents :adl)
 
-(:types
-  llibre mes - object
-  gener febrer març abril maig juny juliol agost setembre octubre novembre desembre - mes
+(:functions
+ (MesActual ?m)
 )
 
 ;Predicats      [predecessor -> ?x és predecessor d'?y]...
 (:predicates
-    (delCataleg ?ll - llibre)     (predecessor ?ll1 - llibre ?ll2 - llibre)
-    (llegit ?ll - llibre ?m - mes)
+    (delCataleg ?ll)     (predecessor ?ll1 ?ll2)
+    (llegit ?ll ?m)
 )
 
 
 ;actions
+;(not (and (exists (?jallegit1) (llegit ?jallegit1 ?m)) (exists (?jallegit2) (llegit ?jallegit2 ?m))))
 (:action llegirllibre
-  :parameters (?ll - llibre ?m - mes)
+  :parameters (?ll ?m)
   :precondition (and (delCataleg ?ll) (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?ll ?m))))))
   :effect (and (llegit ?ll ?m))
 )
+
+(:action AugmentarMes
+    :parameters (?m)
+    :precondition (and (not (and (exists (?jallegit1) (llegit ?jallegit1 ?m)) (exists (?jallegit2) (llegit ?jallegit2 ?m)))))
+    :effect (and (increase (MesActual ?m) 1))
+)
+
+
 )
