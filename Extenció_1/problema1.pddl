@@ -41,7 +41,7 @@
     (predecessor PJ_La_Malediccio_Del_Tita PJ_La_Batalla_Del_Laberint)
     (predecessor PJ_La_Batalla_Del_Laberint PJ_L_Ultim_Heroi_De_L_Olimp)
 
-    (= (MesActual) 0)
+    (= (MesActual) 1)
   )
   
   (:goal

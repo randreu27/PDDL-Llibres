@@ -5,7 +5,7 @@
 (:requirements :strips :fluents :adl)
 
 (:functions
- (MesActual ?m)
+ (MesActual)
 )
 
 ;Predicats      [predecessor -> ?x és predecessor d'?y]...
@@ -18,16 +18,14 @@
 ;actions
 ;(not (and (exists (?jallegit1) (llegit ?jallegit1 ?m)) (exists (?jallegit2) (llegit ?jallegit2 ?m))))
 (:action llegirllibre
-  :parameters (?ll ?m)
+  :parameters (?ll)
   :precondition (and (delCataleg ?ll) (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?ll))))))
   :effect (and (llegit ?ll))
 )
 
 (:action AugmentarMes
-    :parameters (?m)
-    :precondition (and (not (and (exists (?jallegit1) (llegit ?jallegit1)) (exists (?jallegit2) (llegit ?jallegit2)))))
-    :effect (and (increase (MesActual ?m) 1))
+    :parameters ()
+    :precondition (and (exists (?ll) (llegit ?ll)))
+    :effect (and (increase (MesActual) 1))
 )
-
-
 )
