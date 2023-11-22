@@ -1,4 +1,4 @@
-(define (problem prueba-lectura-mas-grande)
+(define (problem hp_pjo)
   (:domain llibresnivell1)
   
   (:objects

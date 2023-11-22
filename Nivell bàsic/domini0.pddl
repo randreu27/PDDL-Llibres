@@ -1,6 +1,6 @@
 ;Nivell bàsic
 
-(define (domain llibresnivell1)
+(define (domain llibresnivell0)
 
 (:requirements :strips :fluents :adl)
 
