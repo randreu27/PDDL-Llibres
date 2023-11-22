@@ -2,7 +2,7 @@
 
 (define (domain llibresnivell1)
 
-(:requirements :strips :fluents  :adl)
+(:requirements :strips :fluents :adl)
 
 
 ;Predicats      [predecessor -> ?x és predecessor d'?y]...
