@@ -1,5 +1,5 @@
 (define (problem hp_pjo)
-  (:domain llibresnivell1)
+  (:domain llibresnivell0)
   
   (:objects
     HP_I_La_Pedra_Filosofal               HP_I_La_Cambra_Secreta 
