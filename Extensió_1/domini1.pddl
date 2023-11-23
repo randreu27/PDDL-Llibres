@@ -19,9 +19,9 @@
 ;actions
 (:action llegir_llibre
   :parameters (?ll)
-  :precondition (and (= (FerCanvi) 0)
-                (not (exists (?p) (and (predecessor ?p ?ll) 
-                                    (or (mes_anterior ?p) (mes_anterior2 ?p)))))
+  :precondition (and 
+                (= (FerCanvi) 0)
+                (not (exists (?p) (and (predecessor ?p ?ll) (or (mes_anterior ?p) (mes_anterior2 ?p)))))
                 (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p)))))
                 (delCataleg ?ll)
                 )
@@ -30,7 +30,7 @@
 
 (:action llegir_entre_mes
     :parameters (?ll)
-    :precondition (and (delCataleg ?ll)
+    :precondition (and
                   (not (exists (?p) (and (predecessor ?p ?ll) (mes_anterior2 ?p))))
                   (not (exists (?p) (and (predecessor ?p ?ll) (mes_anterior ?p))))
                   (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p)))))
@@ -41,7 +41,8 @@
 
 (:action Seguent_Mes
     :parameters ()
-    :precondition (and (= (FerCanvi) 1) 
+    :precondition (and 
+                  (= (FerCanvi) 1) 
                   (exists (?ll) (or (mes_anterior ?ll) (mes_anterior2 ?ll)))
                   )
     :effect (and (decrease (FerCanvi) 1) 
