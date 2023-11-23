@@ -24,8 +24,8 @@
 )
 
 (:action CanviarMes
-    :parameters (?ll)
-    :precondition (and (exists (?ll) (llegit ?ll)) (not (= (MesActual) 12)))
+    :parameters ()
+    :precondition (and (exists (?ll) (llegit ?ll)))
     :effect (and (increase (MesActual) 1))
 )
 )

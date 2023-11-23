@@ -13,6 +13,7 @@
     PJ_L_Ultim_Heroi_De_L_Olimp
 
     PA1 PA2 CRA FM ABIA
+
   )
   
   (:init
@@ -63,7 +64,7 @@
       (llegit HP_I_Les_Reliquies_De_La_Mort_Part2)
       (llegit PJ_L_Ultim_Heroi_De_L_Olimp)
       (llegit ABIA)
-      (= (MesActual) 13)
+      (= (MesActual) 12)
     )
   )
 )
