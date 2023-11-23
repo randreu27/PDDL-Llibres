@@ -44,7 +44,7 @@
     :effect (and (llegit ?ll) (mes_anterior2 ?ll))
 )
 
-(:action Canviar_Mes
+(:action Seguent_Mes
     :parameters ()
     :precondition (and (= (FerCanvi) 1) (exists (?ll) (or (mes_anterior ?ll) (mes_anterior2 ?ll))))
     :effect (and (decrease (FerCanvi) 1) 
