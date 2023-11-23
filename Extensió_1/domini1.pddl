@@ -5,7 +5,7 @@
 (:requirements :strips :fluents :adl)
 
 (:functions
- (MesActual)
+ (FerCanvi)
 )
 
 ;Predicats      [predecessor -> ?x és predecessor d'?y]...
@@ -16,16 +16,21 @@
 
 
 ;actions
-;(not (and (exists (?jallegit1) (llegit ?jallegit1 ?m)) (exists (?jallegit2) (llegit ?jallegit2 ?m))))
-(:action llegirllibre
+(:action llegir_llibre_amb_predecessor
   :parameters (?ll)
-  :precondition (and (delCataleg ?ll) (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p))))))
+  :precondition (and (= (FerCanvi) 0) (delCataleg ?ll) (exists (?p) (and (predecessor ?p ?ll))) (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p))))))
+  :effect (and (llegit ?ll) (increase (FerCanvi) 1))
+)
+
+(:action llegir_llibre_sense_predecessor
+  :parameters (?ll)
+  :precondition (and (delCataleg ?ll) (not (exists (?p) (and (predecessor ?p ?ll)))))
   :effect (and (llegit ?ll))
 )
 
-(:action CanviarMes
+(:action Canviar_Mes
     :parameters ()
-    :precondition (and (exists (?ll) (llegit ?ll)))
-    :effect (and (increase (MesActual) 1))
+    :precondition (and (= (FerCanvi) 1))
+    :effect (and (decrease (FerCanvi) 1))
 )
 )

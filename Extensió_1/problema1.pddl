@@ -57,7 +57,7 @@
     (predecessor CRA ABIA)
     (predecessor FM ABIA)
 
-    (= (MesActual) 1)
+    (= (FerCanvi) 0)
   )
   
   (:goal
@@ -65,7 +65,6 @@
       (llegit HP_I_Les_Reliquies_De_La_Mort_Part2)
       (llegit PJ_L_Ultim_Heroi_De_L_Olimp)
       (llegit ABIA)
-      (= (MesActual) 12)
     )
   )
 )
