@@ -45,7 +45,8 @@
                   (= (FerCanvi) 1) 
                   (exists (?ll) (or (mes_anterior ?ll) (mes_anterior2 ?ll)))
                   )
-    :effect (and (decrease (FerCanvi) 1) 
+    :effect (and 
+            (decrease (FerCanvi) 1) 
             (forall (?ll) (when (mes_anterior ?ll) (not (mes_anterior ?ll))))
             (forall (?ll) (when (mes_anterior2 ?ll) (not (mes_anterior2 ?ll))))
             )
