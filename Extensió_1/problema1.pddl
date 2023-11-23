@@ -13,7 +13,7 @@
     PJ_L_Ultim_Heroi_De_L_Olimp
 
     ;Exemple NO encadenat: 
-    PA1 PA2 CRA FM ABIA
+    Apunts_PA1 Apunts_PA2 Apunts_CRA Apunts_FM Apunts_ABIA
 
   )
   
@@ -33,11 +33,16 @@
     (delCataleg PJ_La_Batalla_Del_Laberint)
     (delCataleg PJ_L_Ultim_Heroi_De_L_Olimp)
 
-    (delCataleg PA1)
-    (delCataleg PA2)
-    (delCataleg CRA)
-    (delCataleg FM)
-    (delCataleg ABIA)
+    (delCataleg Apunts_PA1)
+    (delCataleg Apunts_PA2)
+    (delCataleg Apunts_CRA)
+    (delCataleg Apunts_FM)
+    (delCataleg Apunts_ABIA)
+
+    (predecessor Apunts_PA1 Apunts_PA2)
+    (predecessor Apunts_PA2 Apunts_ABIA)
+    (predecessor Apunts_CRA Apunts_ABIA)
+    (predecessor Apunts_FM Apunts_ABIA)
 
     (predecessor HP_I_La_Pedra_Filosofal HP_I_La_Cambra_Secreta)
     (predecessor HP_I_La_Cambra_Secreta HP_I_El_Pres_De_Azkaban)
@@ -52,11 +57,6 @@
     (predecessor PJ_La_Malediccio_Del_Tita PJ_La_Batalla_Del_Laberint)
     (predecessor PJ_La_Batalla_Del_Laberint PJ_L_Ultim_Heroi_De_L_Olimp)
 
-    (predecessor PA1 PA2)
-    (predecessor PA2 ABIA)
-    (predecessor CRA ABIA)
-    (predecessor FM ABIA)
-
     (= (FerCanvi) 0)
   )
   
@@ -64,7 +64,7 @@
     (and
       (llegit HP_I_Les_Reliquies_De_La_Mort_Part2)
       (llegit PJ_L_Ultim_Heroi_De_L_Olimp)
-      (llegit ABIA)
+      (llegit Apunts_ABIA)
     )
   )
 )
