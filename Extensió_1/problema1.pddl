@@ -39,10 +39,6 @@
     (delCataleg Apunts_FM)
     (delCataleg Apunts_ABIA)
 
-    (predecessor Apunts_PA1 Apunts_PA2)
-    (predecessor Apunts_PA2 Apunts_ABIA)
-    (predecessor Apunts_CRA Apunts_ABIA)
-    (predecessor Apunts_FM Apunts_ABIA)
 
     (predecessor HP_I_La_Pedra_Filosofal HP_I_La_Cambra_Secreta)
     (predecessor HP_I_La_Cambra_Secreta HP_I_El_Pres_De_Azkaban)
@@ -57,7 +53,13 @@
     (predecessor PJ_La_Malediccio_Del_Tita PJ_La_Batalla_Del_Laberint)
     (predecessor PJ_La_Batalla_Del_Laberint PJ_L_Ultim_Heroi_De_L_Olimp)
 
-    (= (FerCanvi) 0)
+    (predecessor Apunts_PA1 Apunts_PA2)
+    (predecessor Apunts_PA2 Apunts_ABIA)
+    (predecessor Apunts_CRA Apunts_ABIA)
+    (predecessor Apunts_FM Apunts_ABIA)
+
+    (= (MesSeguent) 0)
+    (= (MesActual) 0)
   )
   
   (:goal
