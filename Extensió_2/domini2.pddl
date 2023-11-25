@@ -56,7 +56,7 @@
                   (parallel_per_llegir ?par)
                   (delCataleg ?par)
                   )
-    :effect (and (llegit ?par))
+    :effect (and (llegit ?par) (not (parallel_per_llegir ?par)))
 )
 
 (:action Seguent_Mes
