@@ -1,0 +1,15 @@
+Ordenar les condicions de la precondició (de l'efecte no cal, sempre s'executa tot) de manera que
+primer es realitzin les comprovacions que tenen major impacte. Per exemple, si hi ha més paquets
+que avions, primer comprovar si l'avió està a l'aeroport i després si el paquet està a l'aeroport.
+TLDR: 1r les condicions que fan poques comprovacions però descarten molts casos.
+
+Els predicats guia solen retallar molt l'espai de cerca, però pot ser que el tallem tant que no
+funciona l'algorisme.
+
+Si l'element que busquem amb un exists sabem que segur que existeix, és millor posar-lo com a paràmetre.
+
+Dubtes:
+- El pla ha de tenir 12 mesos com a màxim?
+- Hi poden haver cadenes de més de 12 llibres?
+- Es poden llegir dos (o +) llibres encadenats en un mes (sempre que es llegeixi el predecessor primer)?
+- Hem de fer una versió per a cada extensió o només la més avançada?
