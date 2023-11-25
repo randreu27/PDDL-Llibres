@@ -29,6 +29,7 @@
   :parameters (?ll)
   :precondition (and 
                 (= (MesSeguent) 0)
+                (not (llegit ?ll))
                 (not (exists (?p) (and (predecessor ?p ?ll) (or (mes_anterior ?p) (mes_anterior2 ?p)))))
                 (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p)))))
                 (delCataleg ?ll)

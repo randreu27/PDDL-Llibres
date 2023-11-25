@@ -1,4 +1,4 @@
-(define (problem hp_pjo)
+(define (problem hp_pj)
   (:domain llibresnivell0)
   
   (:objects

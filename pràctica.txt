@@ -12,6 +12,24 @@ Si l'element que busquem amb un exists sabem que segur que existeix, és millor 
 Parlar de motivació de la pràctica: problema real que vaig tenir quan vaig voler llegir PJ i el calze dels déus
 i no sabia quins llibres havia de llegir abans.
 
+Fer un fitxer de python que generi instàncies aleatòries del problema i guardi el pla final amb els llibres
+que cal llegir cada mes.
+Exemple:
+PDDL:
+step    0: LEGIRLLIBRE PJ_EL_LLADRE_DEL_LLAMPEC
+        1: LEGIRLLIBRE PJ_EL_MAR_DELS_MONSTRES
+        2: LEGIRLLIBRE PJ_LA_MALEDICCIO_DEL_TITA
+        3: LEGIRLLIBRE PJ_LA_BATALLA_DEL_LABERINT
+        4: LEGIRLLIBRE PJ_L_ULTIM_HEROI_DE_L_OLIMP
+        5: LEGIRLLIBRE PJ_EL_CALZE_DELS_DEUS
+Python:
+Gener: PJ_EL_LLADRE_DEL_LLAMPEC
+Febrer: PJ_EL_MAR_DELS_MONSTRES
+Març: PJ_LA_MALEDICCIO_DEL_TITA
+Abril: PJ_LA_BATALLA_DEL_LABERINT
+Maig: PJ_L_ULTIM_HEROI_DE_L_OLIMP
+Juny: PJ_EL_CALZE_DELS_DEUS
+
 
 Dubtes:
 - El pla ha de tenir 12 mesos com a màxim?
