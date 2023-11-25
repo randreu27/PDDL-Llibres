@@ -14,10 +14,32 @@
 
     ;Exemple NO encadenat: 
     Apunts_PA1 Apunts_PA2 Apunts_CRA Apunts_FM Apunts_ABIA
+      
+    ;Llibres paral·lels: (A la saga de Percy Jackson)
+    L_Heroi_Perdut                        Les_Proves_D_Apolo
+    Mags_i_SemiDeus
 
   )
   
   (:init
+    (parallel L_Heroi_Perdut PJ_El_Lladre_Del_Llampec)
+    (parallel L_Heroi_Perdut PJ_El_Mar_Dels_Monstres)
+    (parallel L_Heroi_Perdut PJ_La_Malediccio_Del_Tita)
+    (parallel L_Heroi_Perdut PJ_La_Batalla_Del_Laberint)
+    (parallel L_Heroi_Perdut PJ_L_Ultim_Heroi_De_L_Olimp)
+
+    (parallel Les_Proves_D_Apolo PJ_El_Lladre_Del_Llampec)
+    (parallel Les_Proves_D_Apolo PJ_El_Mar_Dels_Monstres)
+    (parallel Les_Proves_D_Apolo PJ_La_Malediccio_Del_Tita)
+    (parallel Les_Proves_D_Apolo PJ_La_Batalla_Del_Laberint)
+    (parallel Les_Proves_D_Apolo PJ_L_Ultim_Heroi_De_L_Olimp)
+
+    (parallel Mags_i_SemiDeus PJ_El_Lladre_Del_Llampec)
+    (parallel Mags_i_SemiDeus PJ_El_Mar_Dels_Monstres)
+    (parallel Mags_i_SemiDeus PJ_La_Malediccio_Del_Tita)
+    (parallel Mags_i_SemiDeus PJ_La_Batalla_Del_Laberint)
+    (parallel Mags_i_SemiDeus PJ_L_Ultim_Heroi_De_L_Olimp)
+
     (delCataleg HP_I_La_Pedra_Filosofal)
     (delCataleg HP_I_La_Cambra_Secreta)
     (delCataleg HP_I_El_Pres_De_Azkaban)

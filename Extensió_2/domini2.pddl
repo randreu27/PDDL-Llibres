@@ -1,4 +1,4 @@
-;Extensió 1
+;Extensió 2
 
 (define (domain llibresnivell2)
 
@@ -10,10 +10,15 @@
 )
 
 ;Predicats      [predecessor -> ?x és predecessor d'?y]...
+;               [parallel -> ?x és un llibre paral·lel d'?y]...
 (:predicates
-    (delCataleg ?ll)        (predecessor ?ll1 ?ll2)
-    (llegit ?ll)
-    (mes_anterior ?ll)      (mes_anterior2 ?ll)
+    (delCataleg ?ll)        
+    (predecessor ?ll1 ?ll2)
+    (llegit ?ll)         
+    (parallel ?ll1 ?ll2)
+    (mes_anterior ?ll)      
+    (mes_anterior2 ?ll)
+    (parallel_per_llegir ?ll)
 )
 
 
@@ -26,7 +31,13 @@
                 (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p)))))
                 (delCataleg ?ll)
                 )
-  :effect (and (llegit ?ll) (increase (MesSeguent) 1) (mes_anterior ?ll))
+  :effect (and 
+          (llegit ?ll) 
+          (increase (MesSeguent) 1) 
+          (mes_anterior ?ll)
+          ;NO FUNCIONA
+          (forall (?par) (when (parallel ?par ?ll) (parallel_per_llegir ?par)))
+          )
 )
 
 (:action llegir_llibre_auxiliar
@@ -38,6 +49,15 @@
                   (delCataleg ?ll)
                   )
     :effect (and (llegit ?ll) (mes_anterior2 ?ll))
+)
+
+(:action llegir_parallel
+    :parameters (?par)
+    :precondition (and 
+                  (parallel_per_llegir ?par)
+                  (delCataleg ?par)
+                  )
+    :effect (and (llegit ?par) (not (parallel_per_llegir ?par)))
 )
 
 (:action Seguent_Mes
