@@ -35,6 +35,7 @@
           (llegit ?ll) 
           (increase (MesSeguent) 1) 
           (mes_anterior ?ll)
+          ;NO FUNCIONA
           (forall (?par) (when (parallel ?par ?ll) (parallel_per_llegir ?par)))
           )
 )
