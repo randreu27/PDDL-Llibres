@@ -37,7 +37,7 @@
           (llegit ?ll) 
           (increase (MesSeguent) 1) 
           (mes_anterior ?ll)
-          (forall (?par) (when (parallel ?par ?ll) (increase (hi_ha_parallel) 1)))
+          ;(when (exists (?par) (parallel ?par ?ll)) (increase (hi_ha_parallel) 1))
           )
 )
 
@@ -49,7 +49,11 @@
                   (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p)))))
                   (delCataleg ?ll)
                   )
-    :effect (and (llegit ?ll) (mes_anterior2 ?ll))
+    :effect (and 
+            (llegit ?ll) 
+            (mes_anterior2 ?ll)
+            ;(when (exists (?par) (parallel ?par ?ll)) (increase (hi_ha_parallel) 1))
+            )
 )
 
 (:action establir_parallel
