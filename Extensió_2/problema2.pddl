@@ -136,16 +136,18 @@
 
 
     (= (MesSeguent) 0)
-    (= (MesActual) 0)
+    ;(= (MesActual) 0)
     (= (hi_ha_parallel) 0)
   )
   
   (:goal
     (and
-      ;(llegit HP_I_Les_Reliquies_De_La_Mort_Part2)
+      (llegit HP_I_Les_Reliquies_De_La_Mort_Part2)
       (llegit PJ_El_Calze_Dels_Deus)
       (llegit Apunts_ABIA)
-      (< (MesActual) 13)
+      (llegit Mags_i_SemiDeus)
+      (llegit KANE_L_Ombra_De_La_Serp)
+      ;(< (MesActual) 13)
     )
   )
 )

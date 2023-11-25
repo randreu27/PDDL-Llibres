@@ -45,6 +45,7 @@
 (:action llegir_llibre_auxiliar
     :parameters (?ll)
     :precondition (and
+                  (not (llegit ?ll))
                   (not (exists (?p) (and (predecessor ?p ?ll) (mes_anterior2 ?p))))
                   (not (exists (?p) (and (predecessor ?p ?ll) (mes_anterior ?p))))
                   (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p)))))
