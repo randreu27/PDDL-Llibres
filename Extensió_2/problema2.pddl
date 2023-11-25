@@ -7,7 +7,7 @@
     HP_I_La_Pedra_Filosofal               HP_I_La_Cambra_Secreta 
     HP_I_El_Pres_De_Azkaban               HP_I_El_Calze_De_foc
     HP_I_La_Ordre_Del_Fenix               HP_I_El_Misteri_Del_Princep
-    HP_I_Les_Reliquies_De_La_Mort_Part1   HP_I_Les_Reliquies_De_La_Mort_Part2
+    HP_I_Les_Reliquies_De_La_Mort
 
     ;Percy Jackson i els Déus de l'Olimp
     PJ_El_Lladre_Del_Llampec              PJ_El_Mar_Dels_Monstres
@@ -41,8 +41,7 @@
     (delCataleg HP_I_El_Calze_De_foc)
     (delCataleg HP_I_La_Ordre_Del_Fenix)
     (delCataleg HP_I_El_Misteri_Del_Princep)
-    (delCataleg HP_I_Les_Reliquies_De_La_Mort_Part1)
-    (delCataleg HP_I_Les_Reliquies_De_La_Mort_Part2)
+    (delCataleg HP_I_Les_Reliquies_De_La_Mort)
 
     (delCataleg PJ_El_Lladre_Del_Llampec)
     (delCataleg PJ_El_Mar_Dels_Monstres)
@@ -77,8 +76,7 @@
     (predecessor HP_I_El_Pres_De_Azkaban HP_I_El_Calze_De_foc)
     (predecessor HP_I_El_Calze_De_foc HP_I_La_Ordre_Del_Fenix)
     (predecessor HP_I_La_Ordre_Del_Fenix HP_I_El_Misteri_Del_Princep)
-    (predecessor HP_I_El_Misteri_Del_Princep HP_I_Les_Reliquies_De_La_Mort_Part1)
-    (predecessor HP_I_Les_Reliquies_De_La_Mort_Part1 HP_I_Les_Reliquies_De_La_Mort_Part2)
+    (predecessor HP_I_El_Misteri_Del_Princep HP_I_Les_Reliquies_De_La_Mort)
 
     (predecessor PJ_El_Lladre_Del_Llampec PJ_El_Mar_Dels_Monstres)
     (predecessor PJ_El_Mar_Dels_Monstres PJ_La_Malediccio_Del_Tita)
@@ -142,7 +140,7 @@
   
   (:goal
     (and
-      (llegit HP_I_Les_Reliquies_De_La_Mort_Part2)
+      (llegit HP_I_Les_Reliquies_De_La_Mort)
       (llegit PJ_El_Calze_Dels_Deus)
       (llegit Apunts_ABIA)
       (llegit Mags_i_SemiDeus)
