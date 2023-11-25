@@ -7,6 +7,8 @@
 (:functions
  (MesSeguent)
  (MesActual)
+
+ (hi_ha_parallel)
 )
 
 ;Predicats      [predecessor -> ?x és predecessor d'?y]...
@@ -35,8 +37,7 @@
           (llegit ?ll) 
           (increase (MesSeguent) 1) 
           (mes_anterior ?ll)
-          ;NO FUNCIONA
-          (forall (?par) (when (parallel ?par ?ll) (parallel_per_llegir ?par)))
+          (when (exists (?par) (parallel ?par ?ll)) (increase (hi_ha_parallel) 1))
           )
 )
 
@@ -51,18 +52,34 @@
     :effect (and (llegit ?ll) (mes_anterior2 ?ll))
 )
 
+(:action establir_parallel
+  :parameters (?ll ?par)
+  :precondition (and 
+                (>= (hi_ha_parallel) 1)
+                (parallel ?par ?ll)
+                (llegit ?ll)
+                )
+  :effect (parallel_per_llegir ?par)
+)
+
+
 (:action llegir_parallel
     :parameters (?par)
     :precondition (and 
                   (parallel_per_llegir ?par)
                   (delCataleg ?par)
                   )
-    :effect (and (llegit ?par) (not (parallel_per_llegir ?par)))
+    :effect (and 
+            (llegit ?par) 
+            (not (parallel_per_llegir ?par)) 
+            (decrease (hi_ha_parallel) 1)
+            )
 )
 
 (:action Seguent_Mes
     :parameters ()
     :precondition (and
+                  (= (hi_ha_parallel) 0)    
                   (< (MesActual) 12)
                   (= (MesSeguent) 1)
                   (exists (?ll) (or (mes_anterior ?ll) (mes_anterior2 ?ll)))

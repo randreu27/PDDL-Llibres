@@ -82,6 +82,7 @@
 
     (= (MesSeguent) 0)
     (= (MesActual) 0)
+    (= (hi_ha_parallel) 0)
   )
   
   (:goal
