@@ -8,6 +8,11 @@ funciona l'algorisme.
 
 Si l'element que busquem amb un exists sabem que segur que existeix, és millor posar-lo com a paràmetre.
 
+
+Parlar de motivació de la pràctica: problema real que vaig tenir quan vaig voler llegir PJ i el calze dels déus
+i no sabia quins llibres havia de llegir abans.
+
+
 Dubtes:
 - El pla ha de tenir 12 mesos com a màxim?
 - Hi poden haver cadenes de més de 12 llibres?

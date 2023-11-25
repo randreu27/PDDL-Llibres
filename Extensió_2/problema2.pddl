@@ -3,21 +3,33 @@
   
   (:objects
     ;Exemple Encadenat:
+    ;Harry Potter
     HP_I_La_Pedra_Filosofal               HP_I_La_Cambra_Secreta 
     HP_I_El_Pres_De_Azkaban               HP_I_El_Calze_De_foc
     HP_I_La_Ordre_Del_Fenix               HP_I_El_Misteri_Del_Princep
     HP_I_Les_Reliquies_De_La_Mort_Part1   HP_I_Les_Reliquies_De_La_Mort_Part2
 
+    ;Percy Jackson i els Déus de l'Olimp
     PJ_El_Lladre_Del_Llampec              PJ_El_Mar_Dels_Monstres
     PJ_La_Malediccio_Del_Tita             PJ_La_Batalla_Del_Laberint
-    PJ_L_Ultim_Heroi_De_L_Olimp
+    PJ_L_Ultim_Heroi_De_L_Olimp           PJ_El_Calze_Dels_Deus
+    ;Percy Jackson i els Herois de l'Olimp
+    HO_L_Heroi_Perdut                     HO_El_Fill_De_Neptu
+    HO_La_Marca_D_Atena                   HO_La_Casa_D_Hades
+    HO_La_Sang_De_L_Olimp
 
-    ;Exemple NO encadenat: 
+    ;Exemple NO encadenat:
     Apunts_PA1 Apunts_PA2 Apunts_CRA Apunts_FM Apunts_ABIA
       
-    ;Llibres paral·lels: (A la saga de Percy Jackson)
-    L_Heroi_Perdut                        Les_Proves_D_Apolo
-    Mags_i_SemiDeus
+    ;Llibres paral·lels a:
+    ;Herois de l'Olimp
+    KANE_La_Piramide_Vermella             KANE_La_Malediccio_De_Ra
+    KANE_La_Sombra_De_La_Serp
+
+    ;Percy Jackson i els Déus de l'Olimp
+
+
+
 
   )
   
@@ -54,6 +66,7 @@
     (delCataleg PJ_La_Malediccio_Del_Tita)
     (delCataleg PJ_La_Batalla_Del_Laberint)
     (delCataleg PJ_L_Ultim_Heroi_De_L_Olimp)
+    (delCataleg PJ_El_Calze_Dels_Deus)
 
     (delCataleg Apunts_PA1)
     (delCataleg Apunts_PA2)
@@ -74,6 +87,7 @@
     (predecessor PJ_El_Mar_Dels_Monstres PJ_La_Malediccio_Del_Tita)
     (predecessor PJ_La_Malediccio_Del_Tita PJ_La_Batalla_Del_Laberint)
     (predecessor PJ_La_Batalla_Del_Laberint PJ_L_Ultim_Heroi_De_L_Olimp)
+    (predecessor PJ_L_Ultim_Heroi_De_L_Olimp PJ_El_Calze_Dels_Deus)
 
     (predecessor Apunts_PA1 Apunts_PA2)
     (predecessor Apunts_PA2 Apunts_ABIA)
@@ -88,8 +102,9 @@
   (:goal
     (and
       (llegit HP_I_Les_Reliquies_De_La_Mort_Part2)
-      (llegit PJ_L_Ultim_Heroi_De_L_Olimp)
+      (llegit PJ_El_Calze_Dels_Deus)
       (llegit Apunts_ABIA)
+      (< (MesActual) 13)
     )
   )
 )

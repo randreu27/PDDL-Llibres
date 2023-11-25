@@ -10,7 +10,7 @@
 
     PJ_El_Lladre_Del_Llampec              PJ_El_Mar_Dels_Monstres
     PJ_La_Malediccio_Del_Tita             PJ_La_Batalla_Del_Laberint
-    PJ_L_Ultim_Heroi_De_L_Olimp
+    PJ_L_Ultim_Heroi_De_L_Olimp           PJ_El_Calze_Dels_Deus
 
     ;Exemple NO encadenat: 
     Apunts_PA1 Apunts_PA2 Apunts_CRA Apunts_FM Apunts_ABIA
@@ -32,6 +32,7 @@
     (delCataleg PJ_La_Malediccio_Del_Tita)
     (delCataleg PJ_La_Batalla_Del_Laberint)
     (delCataleg PJ_L_Ultim_Heroi_De_L_Olimp)
+    (delCataleg PJ_El_Calze_Dels_Deus)
 
     (delCataleg Apunts_PA1)
     (delCataleg Apunts_PA2)
@@ -52,11 +53,14 @@
     (predecessor PJ_El_Mar_Dels_Monstres PJ_La_Malediccio_Del_Tita)
     (predecessor PJ_La_Malediccio_Del_Tita PJ_La_Batalla_Del_Laberint)
     (predecessor PJ_La_Batalla_Del_Laberint PJ_L_Ultim_Heroi_De_L_Olimp)
+    (predecessor PJ_L_Ultim_Heroi_De_L_Olimp PJ_El_Calze_Dels_Deus)
 
     (predecessor Apunts_PA1 Apunts_PA2)
     (predecessor Apunts_PA2 Apunts_ABIA)
     (predecessor Apunts_CRA Apunts_ABIA)
     (predecessor Apunts_FM Apunts_ABIA)
+
+    (llegit PJ_L_Ultim_Heroi_De_L_Olimp)
 
     (= (MesSeguent) 0)
     (= (MesActual) 0)
@@ -65,7 +69,7 @@
   (:goal
     (and
       (llegit HP_I_Les_Reliquies_De_La_Mort_Part2)
-      (llegit PJ_L_Ultim_Heroi_De_L_Olimp)
+      (llegit PJ_El_Calze_Dels_Deus)
       (llegit Apunts_ABIA)
     )
   )
