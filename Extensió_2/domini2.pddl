@@ -37,7 +37,7 @@
           (llegit ?ll) 
           (increase (MesSeguent) 1) 
           (mes_anterior ?ll)
-          (when (exists (?par) (parallel ?par ?ll)) (increase (hi_ha_parallel) 1))
+          (forall (?par) (when (parallel ?par ?ll) (increase (hi_ha_parallel) 1)))
           )
 )
 
@@ -55,7 +55,6 @@
 (:action establir_parallel
   :parameters (?ll ?par)
   :precondition (and 
-                (>= (hi_ha_parallel) 1)
                 (parallel ?par ?ll)
                 (llegit ?ll)
                 )
