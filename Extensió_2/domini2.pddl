@@ -55,8 +55,10 @@
 (:action establir_parallel
   :parameters (?ll ?par)
   :precondition (and 
-                (parallel ?par ?ll)
+                (not (llegit ?par))
                 (llegit ?ll)
+                (parallel ?par ?ll)
+                (delCataleg ?par)
                 )
   :effect (parallel_per_llegir ?par)
 )
@@ -66,7 +68,6 @@
     :parameters (?par)
     :precondition (and 
                   (parallel_per_llegir ?par)
-                  (delCataleg ?par)
                   )
     :effect (and 
             (llegit ?par) 
