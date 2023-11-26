@@ -5,7 +5,7 @@
     ;Exemple Encadenat:
     ;Harry Potter
     HP_I_La_Pedra_Filosofal               HP_I_La_Cambra_Secreta 
-    HP_I_El_Pres_De_Azkaban               HP_I_El_Calze_De_foc
+    HP_I_El_Pres_D_Azkaban                HP_I_El_Calze_De_foc
     HP_I_La_Ordre_Del_Fenix               HP_I_El_Misteri_Del_Princep
     HP_I_Les_Reliquies_De_La_Mort
 
@@ -37,7 +37,7 @@
   (:init
     (delCataleg HP_I_La_Pedra_Filosofal)
     (delCataleg HP_I_La_Cambra_Secreta)
-    (delCataleg HP_I_El_Pres_De_Azkaban)
+    (delCataleg HP_I_El_Pres_D_Azkaban)
     (delCataleg HP_I_El_Calze_De_foc)
     (delCataleg HP_I_La_Ordre_Del_Fenix)
     (delCataleg HP_I_El_Misteri_Del_Princep)
@@ -72,8 +72,8 @@
 
 
     (predecessor HP_I_La_Pedra_Filosofal HP_I_La_Cambra_Secreta)
-    (predecessor HP_I_La_Cambra_Secreta HP_I_El_Pres_De_Azkaban)
-    (predecessor HP_I_El_Pres_De_Azkaban HP_I_El_Calze_De_foc)
+    (predecessor HP_I_La_Cambra_Secreta HP_I_El_Pres_D_Azkaban)
+    (predecessor HP_I_El_Pres_D_Azkaban HP_I_El_Calze_De_foc)
     (predecessor HP_I_El_Calze_De_foc HP_I_La_Ordre_Del_Fenix)
     (predecessor HP_I_La_Ordre_Del_Fenix HP_I_El_Misteri_Del_Princep)
     (predecessor HP_I_El_Misteri_Del_Princep HP_I_Les_Reliquies_De_La_Mort)
@@ -115,6 +115,18 @@
     (parallel Els_Herois_Grecs PJ_La_Malediccio_Del_Tita)
     (parallel Els_Herois_Grecs PJ_La_Batalla_Del_Laberint)
     (parallel Els_Herois_Grecs PJ_L_Ultim_Heroi_De_L_Olimp)
+
+    (parallel Els_Deus_Grecs HO_L_Heroi_Perdut)
+    (parallel Els_Deus_Grecs HO_El_Fill_De_Neptu)
+    (parallel Els_Deus_Grecs HO_La_Marca_D_Atena)
+    (parallel Els_Deus_Grecs HO_La_Casa_D_Hades)
+    (parallel Els_Deus_Grecs HO_La_Sang_De_L_Olimp)
+
+    (parallel Els_Herois_Grecs HO_L_Heroi_Perdut)
+    (parallel Els_Herois_Grecs HO_El_Fill_De_Neptu)
+    (parallel Els_Herois_Grecs HO_La_Marca_D_Atena)
+    (parallel Els_Herois_Grecs HO_La_Casa_D_Hades)
+    (parallel Els_Herois_Grecs HO_La_Sang_De_L_Olimp)
 
     (parallel KANE_La_Piramide_Vermella HO_L_Heroi_Perdut)
     (parallel KANE_La_Piramide_Vermella HO_El_Fill_De_Neptu)
