@@ -99,7 +99,7 @@
     (= (PaginesLlibre Apunts_PA1) 135)
     (= (PaginesLlibre Apunts_PA2) 208)
     (= (PaginesLlibre Apunts_CRA) 92)
-    (= (PaginesLlibre Apunts_FM) 61)
+    (= (PaginesLlibre Apunts_FM) 81)
     (= (PaginesLlibre Apunts_ABIA) 200)
 
 
@@ -186,7 +186,7 @@
     (and
       (llegit HP_I_Les_Reliquies_De_La_Mort)
       (llegit PJ_El_Calze_Dels_Deus)
-      ;(llegit Mags_i_SemiDeus)
+      (llegit Mags_i_SemiDeus)
       (llegit Apunts_ABIA)
       ;(< (MesActual) 13)
     )
