@@ -6,7 +6,6 @@
 
 (:functions
  (MesSeguent)
- ;(MesActual)
 )
 
 ;Predicats      [predecessor -> ?x és predecessor d'?y]...
@@ -54,13 +53,11 @@
 
 (:action Seguent_Mes
     :parameters ()
-    :precondition (and  
-                  ;(< (MesActual) 12)
+    :precondition (and
                   (= (MesSeguent) 1)
                   (exists (?ll) (or (mes_anterior ?ll) (mes_anterior2 ?ll)))
                   )
     :effect (and
-            ;(increase (MesActual) 1)
             (decrease (MesSeguent) 1)
             (forall (?ll) (when (mes_anterior ?ll) (not (mes_anterior ?ll))))
             (forall (?ll) (when (mes_anterior2 ?ll) (not (mes_anterior2 ?ll))))
