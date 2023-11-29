@@ -1,18 +1,20 @@
 ;Extensió 2
 
-(define (domain llibresnivell2)
+(define (domain llibresnivell3)
 
 (:requirements :strips :fluents :adl)
 
 (:functions
  (MesSeguent)
  ;(MesActual)
+ (PaginesLlibre ?ll)
+ (PaginesMes)
 )
 
 ;Predicats      [predecessor -> ?x és predecessor d'?y]...
 ;               [parallel -> ?x és un llibre paral·lel d'?y]...
 (:predicates
-    (delCataleg ?ll)        
+    (delCataleg ?ll)
     (predecessor ?ll1 ?ll2)
     (llegit ?ll)         
     (parallel ?ll1 ?ll2)
@@ -24,24 +26,27 @@
 ;actions
 (:action llegir_llibre
   :parameters (?ll)
-  :precondition (and 
+  :precondition (and
                 (= (MesSeguent) 0)
                 (not (llegit ?ll))
+                (< (+ (PaginesMes) (PaginesLlibre ?ll)) 801)
                 (not (exists (?p) (and (predecessor ?p ?ll) (or (mes_anterior ?p) (mes_anterior2 ?p)))))
                 (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p)))))
                 (forall (?para) (not (parallel ?para ?ll)))
                 (delCataleg ?ll)
                 )
-  :effect (and
+  :effect (and 
           (llegit ?ll) 
           (increase (MesSeguent) 1)
           (mes_anterior ?ll)
+          (increase (PaginesMes) (PaginesLlibre ?ll))
           )
 )
 
 (:action llegir_llibre_auxiliar
     :parameters (?ll)
     :precondition (and
+                  (< (+ (PaginesMes) (PaginesLlibre ?ll)) 801)
                   (not (exists (?p) (and (predecessor ?p ?ll) (mes_anterior2 ?p))))
                   (not (exists (?p) (and (predecessor ?p ?ll) (mes_anterior ?p))))
                   (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p)))))
@@ -50,6 +55,7 @@
     :effect (and 
             (llegit ?ll) 
             (mes_anterior2 ?ll)
+            (increase (PaginesMes) (PaginesLlibre ?ll))
             )
 )
 
@@ -65,6 +71,7 @@
             (decrease (MesSeguent) 1)
             (forall (?ll) (when (mes_anterior ?ll) (not (mes_anterior ?ll))))
             (forall (?ll) (when (mes_anterior2 ?ll) (not (mes_anterior2 ?ll))))
+            (decrease (PaginesMes) (PaginesMes))
             )
 )
 )

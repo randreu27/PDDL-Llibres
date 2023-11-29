@@ -30,45 +30,77 @@
     KANE_La_Piramide_Vermella             KANE_El_Tron_De_Foc
     KANE_L_Ombra_De_La_Serp
 
-    ;Posterior a Herois de l'Olimp, Kane
+    ;Posterior a Herois de l'Olimp i a Kane
     Mags_i_SemiDeus
   )
   
   (:init
-    (delCataleg HP_I_La_Pedra_Filosofal 301)
-    (delCataleg HP_I_La_Cambra_Secreta 332)
-    (delCataleg HP_I_El_Pres_D_Azkaban 416)
-    (delCataleg HP_I_El_Calze_De_foc 704)
-    (delCataleg HP_I_La_Ordre_Del_Fenix 768)
-    (delCataleg HP_I_El_Misteri_Del_Princep 608)
-    (delCataleg HP_I_Les_Reliquies_De_La_Mort 607)
+    (delCataleg HP_I_La_Pedra_Filosofal)
+    (delCataleg HP_I_La_Cambra_Secreta)
+    (delCataleg HP_I_El_Pres_D_Azkaban)
+    (delCataleg HP_I_El_Calze_De_foc)
+    (delCataleg HP_I_La_Ordre_Del_Fenix)
+    (delCataleg HP_I_El_Misteri_Del_Princep)
+    (delCataleg HP_I_Les_Reliquies_De_La_Mort)
 
-    (delCataleg PJ_El_Lladre_Del_Llampec 364)
-    (delCataleg PJ_El_Mar_Dels_Monstres 288)
-    (delCataleg PJ_La_Malediccio_Del_Tita 316)
-    (delCataleg PJ_La_Batalla_Del_Laberint 384)
-    (delCataleg PJ_L_Ultim_Heroi_De_L_Olimp 384)
-    (delCataleg PJ_El_Calze_Dels_Deus 256)
+    (delCataleg PJ_El_Lladre_Del_Llampec)
+    (delCataleg PJ_El_Mar_Dels_Monstres)
+    (delCataleg PJ_La_Malediccio_Del_Tita)
+    (delCataleg PJ_La_Batalla_Del_Laberint)
+    (delCataleg PJ_L_Ultim_Heroi_De_L_Olimp)
+    (delCataleg PJ_El_Calze_Dels_Deus)
 
-    (delCataleg HO_L_Heroi_Perdut 510)
-    (delCataleg HO_El_Fill_De_Neptu 423)
-    (delCataleg HO_La_Marca_D_Atena 553)
-    (delCataleg HO_La_Casa_D_Hades 576)
-    (delCataleg HO_La_Sang_De_L_Olimp 486)
+    (delCataleg HO_L_Heroi_Perdut)
+    (delCataleg HO_El_Fill_De_Neptu)
+    (delCataleg HO_La_Marca_D_Atena)
+    (delCataleg HO_La_Casa_D_Hades)
+    (delCataleg HO_La_Sang_De_L_Olimp)
 
-    (delCataleg KANE_La_Piramide_Vermella 504)
-    (delCataleg KANE_El_Tron_De_Foc 432)
-    (delCataleg KANE_L_Ombra_De_La_Serp 379)
+    (delCataleg KANE_La_Piramide_Vermella)
+    (delCataleg KANE_El_Tron_De_Foc)
+    (delCataleg KANE_L_Ombra_De_La_Serp)
 
-    (delCataleg Els_Deus_Grecs 416)
-    (delCataleg Els_Herois_Grecs 512)
+    (delCataleg Els_Deus_Grecs)
+    (delCataleg Els_Herois_Grecs)
     (delCataleg Mags_i_SemiDeus)
 
-    (delCataleg Apunts_PA1 135)
-    (delCataleg Apunts_PA2 208)
-    (delCataleg Apunts_CRA 92)
-    (delCataleg Apunts_FM 61)
-    (delCataleg Apunts_ABIA 200)
+    (delCataleg Apunts_PA1)
+    (delCataleg Apunts_PA2)
+    (delCataleg Apunts_CRA)
+    (delCataleg Apunts_FM)
+    (delCataleg Apunts_ABIA)
+
+
+    (= (PaginesLlibre HP_I_La_Pedra_Filosofal) 301)
+    (= (PaginesLlibre HP_I_La_Cambra_Secreta) 332)
+    (= (PaginesLlibre HP_I_El_Pres_D_Azkaban) 416)
+    (= (PaginesLlibre HP_I_El_Calze_De_foc) 704)
+    (= (PaginesLlibre HP_I_La_Ordre_Del_Fenix) 768)
+    (= (PaginesLlibre HP_I_El_Misteri_Del_Princep) 608)
+    (= (PaginesLlibre HP_I_Les_Reliquies_De_La_Mort) 607)
+
+    (= (PaginesLlibre PJ_El_Lladre_Del_Llampec) 364)
+    (= (PaginesLlibre PJ_El_Mar_Dels_Monstres) 288)
+    (= (PaginesLlibre PJ_La_Malediccio_Del_Tita) 316)
+    (= (PaginesLlibre PJ_La_Batalla_Del_Laberint) 384)
+    (= (PaginesLlibre PJ_L_Ultim_Heroi_De_L_Olimp) 384)
+    (= (PaginesLlibre PJ_El_Calze_Dels_Deus) 256)
+    (= (PaginesLlibre HO_L_Heroi_Perdut) 510)
+    (= (PaginesLlibre HO_El_Fill_De_Neptu) 423)
+    (= (PaginesLlibre HO_La_Marca_D_Atena) 553)
+    (= (PaginesLlibre HO_La_Casa_D_Hades) 576)
+    (= (PaginesLlibre HO_La_Sang_De_L_Olimp) 486)
+    (= (PaginesLlibre KANE_La_Piramide_Vermella) 504)
+    (= (PaginesLlibre KANE_El_Tron_De_Foc) 432)
+    (= (PaginesLlibre KANE_L_Ombra_De_La_Serp) 379)
+    (= (PaginesLlibre Els_Deus_Grecs) 416)
+    (= (PaginesLlibre Els_Herois_Grecs) 512)
+    (= (PaginesLlibre Mags_i_SemiDeus) 0)
+    (= (PaginesLlibre Apunts_PA1) 135)
+    (= (PaginesLlibre Apunts_PA2) 208)
+    (= (PaginesLlibre Apunts_CRA) 92)
+    (= (PaginesLlibre Apunts_FM) 61)
+    (= (PaginesLlibre Apunts_ABIA) 200)
 
 
     (predecessor HP_I_La_Pedra_Filosofal HP_I_La_Cambra_Secreta)
@@ -147,19 +179,16 @@
 
     (= (MesSeguent) 0)
     ;(= (MesActual) 0)
-    (= (PaginesActuals) 0)
-    (= (hi_ha_parallel) 0)
+    (= (PaginesMes) 0)
   )
   
   (:goal
     (and
       (llegit HP_I_Les_Reliquies_De_La_Mort)
       (llegit PJ_El_Calze_Dels_Deus)
+      ;(llegit Mags_i_SemiDeus)
       (llegit Apunts_ABIA)
-      (llegit Mags_i_SemiDeus)
-      (llegit KANE_L_Ombra_De_La_Serp)
       ;(< (MesActual) 13)
     )
   )
 )
-
