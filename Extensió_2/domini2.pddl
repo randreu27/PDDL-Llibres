@@ -42,8 +42,7 @@
 (:action llegir_llibre_auxiliar
     :parameters (?ll)
     :precondition (and
-                  (not (exists (?p) (and (predecessor ?p ?ll) (mes_anterior2 ?p))))
-                  (not (exists (?p) (and (predecessor ?p ?ll) (mes_anterior ?p))))
+                  (not (exists (?p) (and (predecessor ?p ?ll) (or (mes_anterior ?p) (mes_anterior2 ?p)))))
                   (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p)))))
                   (delCataleg ?ll)
                   )
