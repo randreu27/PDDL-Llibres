@@ -30,8 +30,9 @@
                 (= (MesSeguent) 0)
                 (not (llegit ?ll))
                 (< (+ (PaginesMes) (PaginesLlibre ?ll)) 801)
-                (not (exists (?p) (and (predecessor ?p ?ll) (or (mes_anterior ?p) (mes_anterior2 ?p)))))
-                (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p)))))
+                (not (exists (?p) (and (predecessor ?p ?ll) 
+                                       (or (or (mes_anterior ?p) (mes_anterior2 ?p)) 
+                                           (not (llegit ?p))))))
                 (forall (?para) (not (parallel ?para ?ll)))
                 (delCataleg ?ll)
                 )
@@ -47,21 +48,22 @@
     :parameters (?ll)
     :precondition (and
                   (< (+ (PaginesMes) (PaginesLlibre ?ll)) 801)
-                  (not (exists (?p) (and (predecessor ?p ?ll) (mes_anterior2 ?p))))
-                  (not (exists (?p) (and (predecessor ?p ?ll) (mes_anterior ?p))))
-                  (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p)))))
+                  (not (exists (?p) (and (predecessor ?p ?ll) 
+                                       (or (not (llegit ?p))
+                                       (or (mes_anterior ?p) (mes_anterior2 ?p))))))
                   (delCataleg ?ll)
                   )
-    :effect (and 
-            (llegit ?ll) 
+    :effect (and
+            (llegit ?ll)
             (mes_anterior2 ?ll)
             (increase (PaginesMes) (PaginesLlibre ?ll))
             )
 )
 
+
 (:action Seguent_Mes
     :parameters ()
-    :precondition (and  
+    :precondition (and
                   ;(< (MesActual) 12)
                   (= (MesSeguent) 1)
                   (exists (?ll) (or (mes_anterior ?ll) (mes_anterior2 ?ll)))
