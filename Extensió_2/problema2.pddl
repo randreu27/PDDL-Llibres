@@ -147,7 +147,6 @@
 
     (= (MesSeguent) 0)
     ;(= (MesActual) 0)
-    (= (hi_ha_parallel) 0)
   )
   
   (:goal
@@ -155,8 +154,8 @@
       (llegit HP_I_Les_Reliquies_De_La_Mort)
       (llegit PJ_El_Calze_Dels_Deus)
       (llegit Apunts_ABIA)
-      (llegit Mags_i_SemiDeus)
-      (llegit KANE_L_Ombra_De_La_Serp)
+      ;(llegit Mags_i_SemiDeus)
+      ;(llegit KANE_L_Ombra_De_La_Serp)
       ;(< (MesActual) 13)
     )
   )
