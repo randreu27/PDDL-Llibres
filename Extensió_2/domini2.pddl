@@ -18,7 +18,6 @@
     (parallel ?ll1 ?ll2)
     (mes_anterior ?ll)      
     (mes_anterior2 ?ll)
-    (parallel_per_llegir ?ll)
 )
 
 
