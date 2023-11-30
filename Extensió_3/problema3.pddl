@@ -185,12 +185,14 @@
     (and
       ; Possible restricció de mesos (no aplicada)
       ;(< (MesActual) 13)
-      ;(llegit HP_I_Les_Reliquies_De_La_Mort)
-      ;(llegit PJ_El_Calze_Dels_Deus)
-      ;(llegit Mags_i_SemiDeus)
-      ;(llegit Apunts_ABIA)
       ; llegir tots els llibres del catàleg
-      (forall (?ll) (imply (delCataleg ?ll) (llegit ?ll)))
+      ;(forall (?ll) (imply (delCataleg ?ll) (llegit ?ll)))
+
+      ; llegir tots els llibres que cal llegir
+      ;(forall (?ll) (imply (cal_llegir ?ll) (llegit ?ll)))
+
+      ; llegir només els llibres sense successors
+      (forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll)))
     )
   )
 
