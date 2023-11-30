@@ -29,10 +29,3 @@ Març: PJ_LA_MALEDICCIO_DEL_TITA
 Abril: PJ_LA_BATALLA_DEL_LABERINT
 Maig: PJ_L_ULTIM_HEROI_DE_L_OLIMP
 Juny: PJ_EL_CALZE_DELS_DEUS
-
-
-Dubtes:
-- El pla ha de tenir 12 mesos com a màxim?
-- Hi poden haver cadenes de més de 12 llibres?
-- Es poden llegir dos (o +) llibres encadenats en un mes (sempre que es llegeixi el predecessor primer)?
-- Hem de fer una versió per a cada extensió o només la més avançada?

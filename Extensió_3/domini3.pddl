@@ -6,9 +6,9 @@
 
 (:functions
  (MesSeguent)
- ;(MesActual)
  (PaginesLlibre ?ll)
  (PaginesMes)
+ ;(MesActual)
 )
 
 ;Predicats      [predecessor -> ?x és predecessor d'?y]...

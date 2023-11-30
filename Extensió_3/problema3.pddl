@@ -95,7 +95,7 @@
     (= (PaginesLlibre KANE_L_Ombra_De_La_Serp) 379)
     (= (PaginesLlibre Els_Deus_Grecs) 416)
     (= (PaginesLlibre Els_Herois_Grecs) 512)
-    (= (PaginesLlibre Mags_i_SemiDeus) 0)
+    (= (PaginesLlibre Mags_i_SemiDeus) 224)
     (= (PaginesLlibre Apunts_PA1) 135)
     (= (PaginesLlibre Apunts_PA2) 208)
     (= (PaginesLlibre Apunts_CRA) 92)
@@ -176,19 +176,24 @@
     (parallel KANE_L_Ombra_De_La_Serp HO_La_Casa_D_Hades)
     (parallel KANE_L_Ombra_De_La_Serp HO_La_Sang_De_L_Olimp)
 
-
     (= (MesSeguent) 0)
     ;(= (MesActual) 0)
     (= (PaginesMes) 0)
   )
-  
+
   (:goal
     (and
-      (llegit HP_I_Les_Reliquies_De_La_Mort)
-      (llegit PJ_El_Calze_Dels_Deus)
-      (llegit Mags_i_SemiDeus)
-      (llegit Apunts_ABIA)
+      ; Possible restricció de mesos (no aplicada)
       ;(< (MesActual) 13)
+      ;(llegit HP_I_Les_Reliquies_De_La_Mort)
+      ;(llegit PJ_El_Calze_Dels_Deus)
+      ;(llegit Mags_i_SemiDeus)
+      ;(llegit Apunts_ABIA)
+      ; llegir tots els llibres del catàleg
+      (forall (?ll) (imply (delCataleg ?ll) (llegit ?ll)))
     )
   )
+
+  (:metric maximize (PaginesMes))
+
 )
