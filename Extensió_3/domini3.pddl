@@ -21,7 +21,6 @@
     (mes_anterior ?ll)      
     (mes_anterior2 ?ll)
     (cal_llegir ?ll)
-    (no_cal_llegir ?ll)
 )
 
 
