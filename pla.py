@@ -5,33 +5,36 @@ from generador_problema import generar_problema
 parser = argparse.ArgumentParser()
 
 
-parser.add_argument("-e", type=int, help="extensió")
-parser.add_argument("-m", type=int, help="mida")
-parser.add_argument("-ll", type=int, help="llavor")
-parser.add_argument("-f", type=int, help="problema")
-parser.add_argument("-O", action='store_true', help="Optimitzat")
-parser.add_argument("-g", type=int, help="g value")
-parser.add_argument("-h", type=int, help="h value")
+parser.add_argument("-e", type=int)
+parser.add_argument("-m", type=int)
+parser.add_argument("-ll", type=int)
+parser.add_argument("-o", type=str)
+parser.add_argument("-f", type=str)
+parser.add_argument("-O", action='store_true')
+parser.add_argument("-g", type=int)
+parser.add_argument("-H", type=int)
 
 
 args = parser.parse_args()
 
 
-command = "./metricff"
+command = ["./metricff"]
 if args.O:
-    command += " -O"
+    command.append("-O")
 if args.g:
-    command += f" -g {str(args.g)}"
-if args.h:
-    command += f" -h {str(args.h)}"
-if args.d and args.m:
-    if args.s:
+    command.extend(["-g", str(args.g)])
+if args.H:
+    command.extend(["-h", str(args.h)])
+if args.o:
+    command.extend(["-o", args.o])
+if args.e and args.m:
+    if args.ll:
         generar_problema(args.e, args.m, args.ll)
     else:
         generar_problema(args.e, args.m)
-    command += f" -f random_{args.e}_{args.m}.pddl"
+    command.extend(["-f", f"p_{args.e}_{args.m}.pddl"])
 elif args.f:
-    command += f" -f {args.f}.pddl"
+    command.extend(["-f", args.f])
 
 
 # Executar el planificador

@@ -151,11 +151,7 @@
   
   (:goal
     (and
-      (llegit HP_I_Les_Reliquies_De_La_Mort)
-      (llegit PJ_El_Calze_Dels_Deus)
-      (llegit Apunts_ABIA)
-      ;(llegit Mags_i_SemiDeus)
-      ;(llegit KANE_L_Ombra_De_La_Serp)
+      (forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll)))
       ;(< (MesActual) 13)
     )
   )

@@ -43,9 +43,6 @@
   )
   
   (:goal
-    (and
-      (llegit HP_I_Les_Reliquies_De_La_Mort)
-      (llegit PJ_El_Calze_Dels_Deus)
-    )
+    (forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll)))
   )
 )
