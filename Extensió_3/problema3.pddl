@@ -176,10 +176,10 @@
     (parallel KANE_L_Ombra_De_La_Serp HO_La_Casa_D_Hades)
     (parallel KANE_L_Ombra_De_La_Serp HO_La_Sang_De_L_Olimp)
 
-    (llegit HP_I_El_Pres_D_Azkaban)
+    ;(llegit HP_I_El_Pres_D_Azkaban)
 
-    (cal_llegir HP_I_El_Misteri_Del_Princep)
-    (cal_llegir Apunts_ABIA)
+    ;(cal_llegir HP_I_El_Misteri_Del_Princep)
+    ;(cal_llegir Apunts_ABIA)
 
     (= (MesSeguent) 0)
     ;(= (MesActual) 0)
@@ -194,14 +194,14 @@
       ;(forall (?ll) (imply (delCataleg ?ll) (llegit ?ll)))
 
       ; llegir tots els llibres que cal llegir
-      (forall (?ll) (imply (cal_llegir ?ll) (llegit ?ll)))
-      (forall (?ll) (imply (and (not (exists (?ll2) (predecessor ?ll ?ll2)))
-                          (not (exists (?para) (parallel ?para ?ll)))
-                          (not (cal_llegir ?ll)))
-                     (not (llegit ?ll))))
+      ;(forall (?ll) (imply (cal_llegir ?ll) (llegit ?ll)))
+      ;(forall (?ll) (imply (and (not (exists (?ll2) (predecessor ?ll ?ll2)))
+      ;                    (not (exists (?para) (parallel ?para ?ll)))
+      ;                    (not (cal_llegir ?ll)))
+      ;               (not (llegit ?ll))))
 
       ; llegir només els llibres sense successors
-      ;(forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll)))
+      (forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll)))
     )
   )
 
