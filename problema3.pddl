@@ -178,19 +178,12 @@
 
 
     (= (MesSeguent) 0)
-    (= (MesActual) 0)
     (= (PaginesMes) 0)
   )
-  (:metric minimize (MesSeguent))
 
   (:goal
-    (and
-      ; Possible restricció de mesos (no aplicada)
-      ;(< (MesActual) 13)
-
-      ; llegir només els llibres sense successors
-      (forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll)))
-    )
+    ; llegir només els llibres sense successors
+    (forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll)))
   )
 
 )

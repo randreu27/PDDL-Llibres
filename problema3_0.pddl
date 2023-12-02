@@ -182,20 +182,10 @@
     (cal_llegir Apunts_ABIA)
 
     (= (MesSeguent) 0)
-    ;(= (MesActual) 0)
     (= (PaginesMes) 0)
   )
 
   (:goal
-    (and
-      ; Possible restricció de mesos (no aplicada)
-      ;(< (MesActual) 13)
-
-      ; llegir tots els llibres que cal llegir
-      (forall (?ll) (imply (cal_llegir ?ll) (llegit ?ll)))
-    )
+    (forall (?ll) (imply (cal_llegir ?ll) (llegit ?ll)))
   )
-
-  (:metric maximize (PaginesMes))
-
 )

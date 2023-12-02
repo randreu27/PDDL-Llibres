@@ -60,10 +60,6 @@ def generar_problema(extensió=3, n=10, llavor=42):
 
     f.write("  )\n")
 
-    # metric
-    if extensió == 3:
-        f.write("\n  (:metric maximize (PaginesMes))\n")
-
     # goal
     f.write("\n  (:goal ")
     # objectiu: llegir tots els llibres que no tenen successors (per eficiència)

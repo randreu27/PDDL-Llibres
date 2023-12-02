@@ -8,7 +8,6 @@
  (MesSeguent)
  (PaginesLlibre ?ll)
  (PaginesMes)
- (MesActual)
 )
 
 ;Predicats      [predecessor -> ?x és predecessor d'?y]...
@@ -28,6 +27,7 @@
 (:action llegir_llibre
   :parameters (?ll)
   :precondition (and
+                (delCataleg ?ll)
                 (= (MesSeguent) 0)
                 (not (llegit ?ll))
                 (< (+ (PaginesMes) (PaginesLlibre ?ll)) 801)
@@ -35,7 +35,6 @@
                                        (or (or (mes_anterior ?p) (mes_anterior2 ?p)) 
                                            (not (llegit ?p))))))
                 (forall (?para) (not (parallel ?para ?ll)))
-                (delCataleg ?ll)
                 )
   :effect (and 
           (llegit ?ll)
@@ -48,12 +47,12 @@
 (:action llegir_llibre_auxiliar
     :parameters (?ll)
     :precondition (and
+                  (delCataleg ?ll)
                   (not (llegit ?ll))
                   (< (+ (PaginesMes) (PaginesLlibre ?ll)) 801)
                   (not (exists (?p) (and (predecessor ?p ?ll) 
-                                       (or (not (llegit ?p))
-                                       (or (mes_anterior ?p) (mes_anterior2 ?p))))))
-                  (delCataleg ?ll)
+                                         (or (not (llegit ?p))
+                                         (or (mes_anterior ?p) (mes_anterior2 ?p))))))
                   )
     :effect (and
             (llegit ?ll)
@@ -65,12 +64,10 @@
 (:action Seguent_Mes
     :parameters ()
     :precondition (and
-                  ;(< (MesActual) 12)
                   (= (MesSeguent) 1)
                   (exists (?ll) (or (mes_anterior ?ll) (mes_anterior2 ?ll)))
                   )
     :effect (and
-            (increase (MesActual) 1)
             (decrease (MesSeguent) 1)
             (forall (?ll) (when (mes_anterior ?ll) (not (mes_anterior ?ll))))
             (forall (?ll) (when (mes_anterior2 ?ll) (not (mes_anterior2 ?ll))))
