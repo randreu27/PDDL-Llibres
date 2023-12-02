@@ -58,14 +58,15 @@
     (predecessor Apunts_CRA Apunts_ABIA)
     (predecessor Apunts_FM Apunts_ABIA)
 
-    (llegit PJ_L_Ultim_Heroi_De_L_Olimp)
-
     (= (MesSeguent) 0)
-    (= (MesActual) 0)
   )
   
   (:goal
-    (forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll)))
+    (and
+    (llegit Apunts_ABIA)
+    (llegit PJ_El_Calze_Dels_Deus)
+    (llegit HP_I_Les_Reliquies_De_La_Mort)
+    )
   )
 )
 
