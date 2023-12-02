@@ -1,6 +1,7 @@
 import argparse
 import subprocess
 from generador_problema import generar_problema
+import time
 
 parser = argparse.ArgumentParser()
 
@@ -19,6 +20,10 @@ args = parser.parse_args()
 
 
 command = ["./metricff"]
+if args.e and args.o and str(args.e) != args.o[6]:
+    raise Exception("Extensió i domini no coincideixen")
+if args.e and args.m and (args.o or args.f):
+    raise Exception("Si es genera un problema no cal especificar ni -o ni -f")
 if args.O:
     command.append("-O")
 if args.g:
@@ -27,18 +32,36 @@ if args.H:
     command.extend(["-h", str(args.h)])
 if args.o:
     command.extend(["-o", args.o])
-if args.e and args.m:
+if args.f:
+    command.extend(["-f", args.f])
+elif args.e and args.m:
+    print("Generant problema: Extensió", args.e, "amb", args.m, "llibres")
     if args.ll:
         generar_problema(args.e, args.m, args.ll)
     else:
         generar_problema(args.e, args.m)
-    command.extend(["-f", f"p_{args.e}_{args.m}.pddl"])
-elif args.f:
-    command.extend(["-f", args.f])
+    command.extend(["-o", f"domini{args.e}.pddl", "-f", f"p{args.e}_{args.m}.pddl"])
+
 
 
 # Executar el planificador
-subprocess.run(command)
+print()
+for c in command:
+    print(c, end=" ")
+print()
+
+time.sleep(2)
+process = subprocess.Popen(command, stdout=subprocess.PIPE, text=True)
+
+# Captura la sortida a la variable resultat_pla
+resultat_pla = ""
+for line in process.stdout:
+    print(line, end="")
+    resultat_pla += line
+process.wait()
+
+# Ara resultat_pla conté tota la sortida de la comanda i també s'ha mostrat per pantalla
+print("Sortida capturada:", resultat_pla)
 
 resultat_pla = ""
 
