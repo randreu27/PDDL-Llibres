@@ -146,13 +146,11 @@
 
 
     (= (MesSeguent) 0)
-    ;(= (MesActual) 0)
   )
   
   (:goal
     (and
       (forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll)))
-      ;(< (MesActual) 13)
     )
   )
 )
