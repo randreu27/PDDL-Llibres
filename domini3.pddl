@@ -19,7 +19,6 @@
     (parallel ?ll1 ?ll2)
     (mes_anterior ?ll)
     (mes_anterior2 ?ll)
-    (cal_llegir ?ll)
 )
 
 
@@ -32,8 +31,8 @@
                 (not (llegit ?ll))
                 (< (+ (PaginesMes) (PaginesLlibre ?ll)) 801)
                 (not (exists (?p) (and (predecessor ?p ?ll) 
-                                       (or (or (mes_anterior ?p) (mes_anterior2 ?p)) 
-                                           (not (llegit ?p))))))
+                                        (or (not (llegit ?p))
+                                        (or (mes_anterior ?p) (mes_anterior2 ?p))))))
                 (forall (?para) (not (parallel ?para ?ll)))
                 )
   :effect (and 

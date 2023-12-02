@@ -1,4 +1,4 @@
-(define (problem hp_pj_abia)
+(define (problem pj_abia)
   (:domain llibresnivell3)
   
   (:objects
@@ -178,14 +178,12 @@
 
     (llegit HP_I_El_Pres_D_Azkaban)
 
-    (cal_llegir HP_I_El_Misteri_Del_Princep)
-    (cal_llegir Apunts_ABIA)
 
     (= (MesSeguent) 0)
     (= (PaginesMes) 0)
   )
 
   (:goal
-    (forall (?ll) (imply (cal_llegir ?ll) (llegit ?ll)))
+    (and (llegit PJ_El_Calze_Dels_Deus) (llegit Apunts_ABIA))
   )
 )
