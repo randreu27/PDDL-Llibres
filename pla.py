@@ -29,7 +29,7 @@ if args.O:
 if args.g:
     command.extend(["-g", str(args.g)])
 if args.H:
-    command.extend(["-h", str(args.h)])
+    command.extend(["-h", str(args.H)])
 if args.o:
     command.extend(["-o", args.o])
 if args.f:

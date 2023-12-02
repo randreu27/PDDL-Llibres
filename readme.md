@@ -22,3 +22,17 @@ Exemple:
 ```python
 python pla.py -O -e 0 -m 2 -ll 73
 ```
+
+## Generació de problemes aleatoris
+Es pot generar un problema aleatori amb el fitxer generate.py, que genera un problema amb les següents característiques:
+```python
+-e (int)  Extensió del problema (0 a 3)
+-m (int)  Mida del problema, número de llibres (2 a 26)
+-ll (int) Llavor per generar el problema aleatori (42 per defecte)
+```
+Exemple:
+```python
+python
+>> from generador_problema import generar_problema
+>> generar_problema(2, 15, 73)
+```

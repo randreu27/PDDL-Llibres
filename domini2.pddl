@@ -46,7 +46,7 @@
                   (delCataleg ?ll)
                   )
     :effect (and 
-            (llegit ?ll) 
+            (llegit ?ll)
             (mes_anterior2 ?ll)
             )
 )

@@ -16,9 +16,9 @@
 (:predicates
     (delCataleg ?ll)
     (predecessor ?ll1 ?ll2)
-    (llegit ?ll)         
+    (llegit ?ll)
     (parallel ?ll1 ?ll2)
-    (mes_anterior ?ll)      
+    (mes_anterior ?ll)
     (mes_anterior2 ?ll)
     (cal_llegir ?ll)
 )
@@ -28,7 +28,6 @@
 (:action llegir_llibre
   :parameters (?ll)
   :precondition (and
-                (delCataleg ?ll)
                 (= (MesSeguent) 0)
                 (not (llegit ?ll))
                 (< (+ (PaginesMes) (PaginesLlibre ?ll)) 801)
@@ -36,9 +35,10 @@
                                        (or (or (mes_anterior ?p) (mes_anterior2 ?p)) 
                                            (not (llegit ?p))))))
                 (forall (?para) (not (parallel ?para ?ll)))
+                (delCataleg ?ll)
                 )
   :effect (and 
-          (llegit ?ll) 
+          (llegit ?ll)
           (increase (MesSeguent) 1)
           (mes_anterior ?ll)
           (increase (PaginesMes) (PaginesLlibre ?ll))
@@ -48,12 +48,12 @@
 (:action llegir_llibre_auxiliar
     :parameters (?ll)
     :precondition (and
-                  (delCataleg ?ll)
                   (not (llegit ?ll))
                   (< (+ (PaginesMes) (PaginesLlibre ?ll)) 801)
                   (not (exists (?p) (and (predecessor ?p ?ll) 
                                        (or (not (llegit ?p))
                                        (or (mes_anterior ?p) (mes_anterior2 ?p))))))
+                  (delCataleg ?ll)
                   )
     :effect (and
             (llegit ?ll)
