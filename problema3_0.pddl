@@ -193,10 +193,6 @@
 
       ; llegir tots els llibres que cal llegir
       (forall (?ll) (imply (cal_llegir ?ll) (llegit ?ll)))
-      (forall (?ll) (imply (and (not (exists (?ll2) (predecessor ?ll ?ll2)))
-                                (not (exists (?para) (parallel ?para ?ll)))
-                                (not (cal_llegir ?ll)))
-                            (not (llegit ?ll))))
     )
   )
 

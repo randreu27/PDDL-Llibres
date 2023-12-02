@@ -178,9 +178,10 @@
 
 
     (= (MesSeguent) 0)
-    ;(= (MesActual) 0)
+    (= (MesActual) 0)
     (= (PaginesMes) 0)
   )
+  (:metric minimize (MesSeguent))
 
   (:goal
     (and
@@ -191,7 +192,5 @@
       (forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll)))
     )
   )
-
-  (:metric maximize (PaginesMes))
 
 )

@@ -59,17 +59,15 @@ def generar_problema(extensió=3, n=10, llavor=42):
         f.write("\n")
 
     f.write("  )\n")
-    f.write("\n")
-
-    # goal
-    f.write("  (:goal (and ")
-
-    # objectiu: llegir tots els llibres que no tenen successors (per eficiència)
-    f.write("(forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll)))")
-    f.write("))\n\n")
 
     # metric
     if extensió == 3:
-        f.write("  (:metric maximize (PaginesMes))\n")
-    f.write(")\n")
+        f.write("\n  (:metric maximize (PaginesMes))\n")
+
+    # goal
+    f.write("\n  (:goal ")
+    # objectiu: llegir tots els llibres que no tenen successors (per eficiència)
+    f.write("(forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll))))")
+
+    f.write("\n)")
     f.close()

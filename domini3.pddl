@@ -8,7 +8,7 @@
  (MesSeguent)
  (PaginesLlibre ?ll)
  (PaginesMes)
- ;(MesActual)
+ (MesActual)
 )
 
 ;Predicats      [predecessor -> ?x és predecessor d'?y]...
@@ -70,7 +70,7 @@
                   (exists (?ll) (or (mes_anterior ?ll) (mes_anterior2 ?ll)))
                   )
     :effect (and
-            ;(increase (MesActual) 1)
+            (increase (MesActual) 1)
             (decrease (MesSeguent) 1)
             (forall (?ll) (when (mes_anterior ?ll) (not (mes_anterior ?ll))))
             (forall (?ll) (when (mes_anterior2 ?ll) (not (mes_anterior2 ?ll))))
