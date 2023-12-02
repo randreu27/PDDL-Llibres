@@ -34,7 +34,7 @@ if args.o:
     command.extend(["-o", args.o])
 if args.f:
     command.extend(["-f", args.f])
-elif args.e and args.m:
+elif args.e is not None and args.m:
     print("Generant problema: Extensió", args.e, "amb", args.m, "llibres")
     if args.ll:
         generar_problema(args.e, args.m, args.ll)
@@ -59,11 +59,6 @@ for line in process.stdout:
     print(line, end="")
     resultat_pla += line
 process.wait()
-
-# Ara resultat_pla conté tota la sortida de la comanda i també s'ha mostrat per pantalla
-print("Sortida capturada:", resultat_pla)
-
-resultat_pla = ""
 
 # Diccionari per convertir números de mesos a lletres
 mesos_lletres = {

@@ -4,7 +4,7 @@ from math import sqrt
 
 def generar_problema(extensió=3, n=10, llavor=42):
     abecedari = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    assert n > 2, "El nombre de llibres ha de ser com a mínim 3"
+    assert n >= 2, "El nombre de llibres ha de ser com a mínim 3"
     assert n <= 26, "No hi ha prou lletres per a representar tots els llibres"
 
     random.seed(llavor)
@@ -24,29 +24,29 @@ def generar_problema(extensió=3, n=10, llavor=42):
     f.write("\n\t)\n")
 
     # init
-    f.write("  (:init\n")
+    f.write("  (:init")
 
     # delCataleg
     for i in range(n):
-        f.write(f"    (delCataleg {abecedari[i]})\n")
+        f.write(f"\n    (delCataleg {abecedari[i]})")
     f.write("\n")
 
     # PaginesLlibre
     if extensió == 3:
         for i in range(n):
-            f.write(f"    (= (PaginesLlibre {abecedari[i]}) {random.randint(50, 800)})\n")
+            f.write(f"\n    (= (PaginesLlibre {abecedari[i]}) {random.randint(50, 800)})")
         f.write("\n")
 
     # predecessors
     predecessors = []
-    for _ in range(int(sqrt(random.randint(1, n)))):
+    for _ in range(random.randint(1, n//2)):
         x = random.randint(0, n - 2)
         a = abecedari[x]
         b = abecedari[random.randint(x + 1, n - 1)]
 
         if (a, b) not in predecessors:
             predecessors.append((a, b))
-            f.write(f"    (predecessor {a} {b})\n")
+            f.write(f"\n    (predecessor {a} {b})")
     f.write("\n")
 
     # paral·lels
@@ -55,7 +55,7 @@ def generar_problema(extensió=3, n=10, llavor=42):
             x = random.randint(0, n - 2)
             a, b = abecedari[x], abecedari[random.randint(x + 1, n - 1)]
 
-            f.write(f"    (parallel {a} {b})\n")
+            f.write(f"\n    (parallel {a} {b})")
         f.write("\n")
 
     f.write("  )\n")
