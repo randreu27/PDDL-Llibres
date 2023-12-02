@@ -3,9 +3,17 @@ from math import sqrt
 
 
 def generar_problema(extensió=3, n=10, llavor=42):
-    abecedari = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    assert n >= 2, "El nombre de llibres ha de ser com a mínim 3"
-    assert n <= 26, "No hi ha prou lletres per a representar tots els llibres"
+    assert n >= 2, "El nombre de llibres ha de ser com a mínim 2"
+    assert n <= 2600, "No hi ha prou lletres per a representar tots els llibres"
+    # abecedari només és tan gran com necessitem
+    llibres, i = [], 0
+    for lletra in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
+        if len(llibres) >= n:
+            break
+        while i < 100 and len(llibres) < n:
+            llibres.append(f"{lletra}{i:02d}")
+            i += 1
+        i = 0
 
     random.seed(llavor)
 
@@ -14,35 +22,34 @@ def generar_problema(extensió=3, n=10, llavor=42):
 
     # Capçalera
     f.write(f"(define (problem p_{extensió}_{n})\n")
-    f.write(f"  (:domain llibresnivell{extensió})\n")
-    f.write("\n")
+    f.write(f"  (:domain llibresnivell{extensió})\n\n")
 
     # objects
     f.write("  (:objects\n\t")
-    for i in range(n):
-        f.write(f"  {abecedari[i]}")
+    for llibre in llibres:
+        f.write(f"  {llibres}")
     f.write("\n\t)\n")
 
     # init
     f.write("  (:init")
 
     # delCataleg
-    for i in range(n):
-        f.write(f"\n    (delCataleg {abecedari[i]})")
+    for llibre in llibres:
+        f.write(f"\n    (delCataleg {llibre})")
     f.write("\n")
 
     # PaginesLlibre
     if extensió == 3:
-        for i in range(n):
-            f.write(f"\n    (= (PaginesLlibre {abecedari[i]}) {random.randint(50, 800)})")
+        for llibre in llibres:
+            f.write(f"\n    (= (PaginesLlibre {llibre}) {random.randint(50, 800)})")
         f.write("\n")
 
     # predecessors
     predecessors = []
     for _ in range(random.randint(1, n//2)):
         x = random.randint(0, n - 2)
-        a = abecedari[x]
-        b = abecedari[random.randint(x + 1, n - 1)]
+        a = llibres[x]
+        b = llibres[random.randint(x + 1, n - 1)]
 
         if (a, b) not in predecessors:
             predecessors.append((a, b))
@@ -53,10 +60,16 @@ def generar_problema(extensió=3, n=10, llavor=42):
     if extensió >= 2:
         for _ in range(int(sqrt(random.randint(1, n)))):
             x = random.randint(0, n - 2)
-            a, b = abecedari[x], abecedari[random.randint(x + 1, n - 1)]
+            a, b = llibres[x], llibres[random.randint(x + 1, n - 1)]
 
             f.write(f"\n    (parallel {a} {b})")
         f.write("\n")
+
+    # fluents
+    if extensió >= 2:
+        f.write("\n (= (MesSeguent) 0)")
+    if extensió == 3:
+        f.write("\n (= (PaginesMes) 0)")
 
     f.write("  )\n")
 

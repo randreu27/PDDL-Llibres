@@ -59,6 +59,7 @@ for line in process.stdout:
     resultat_pla += line
 process.wait()
 
+
 # Diccionari per convertir números de mesos a lletres
 mesos_lletres = {
     1: "Gener",
@@ -94,7 +95,9 @@ for linia in resultat_pla.split("\n"):
             llibres_per_mes[(any_actual, mes_actual)] = []
         llibres_per_mes[(any_actual, mes_actual)].append(llibre)
 
+
 # Imprimir la sortida per pantalla
+print("\n\nLlibres que cal llegir cada mes:\n")
 for (any, mes), llibres in sorted(llibres_per_mes.items()):
     print(f"{mesos_lletres[mes]} {any}:")
     for llibre in llibres:
