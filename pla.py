@@ -43,7 +43,6 @@ elif args.e is not None and args.m:
     command.extend(["-o", f"domini{args.e}.pddl", "-f", f"p{args.e}_{args.m}.pddl"])
 
 
-
 # Executar el planificador
 print()
 for c in command:

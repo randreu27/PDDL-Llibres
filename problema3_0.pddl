@@ -191,8 +191,12 @@
       ; Possible restricció de mesos (no aplicada)
       ;(< (MesActual) 13)
 
-      ; llegir només els llibres sense successors
-      (forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll)))
+      ; llegir tots els llibres que cal llegir
+      (forall (?ll) (imply (cal_llegir ?ll) (llegit ?ll)))
+      (forall (?ll) (imply (and (not (exists (?ll2) (predecessor ?ll ?ll2)))
+                                (not (exists (?para) (parallel ?para ?ll)))
+                                (not (cal_llegir ?ll)))
+                            (not (llegit ?ll))))
     )
   )
 
