@@ -4,7 +4,7 @@ from math import sqrt
 
 def generar_problema(extensió=3, n=10, llavor=42):
     abecedari = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    assert n > 2, "El nombre de llibres ha de ser com a mínim 3"
+    assert n >= 2, "El nombre de llibres ha de ser com a mínim 3"
     assert n <= 26, "No hi ha prou lletres per a representar tots els llibres"
 
     random.seed(llavor)
