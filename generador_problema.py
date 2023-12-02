@@ -5,7 +5,8 @@ from math import sqrt
 def generar_problema(extensió=3, n=10, llavor=42):
     assert n >= 2, "El nombre de llibres ha de ser com a mínim 2"
     assert n <= 2600, "No hi ha prou lletres per a representar tots els llibres"
-    # abecedari només és tan gran com necessitem
+
+    # només afegim els llibres que necessitem
     llibres, i = [], 0
     for lletra in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
         if len(llibres) >= n:
@@ -27,7 +28,7 @@ def generar_problema(extensió=3, n=10, llavor=42):
     # objects
     f.write("  (:objects\n\t")
     for llibre in llibres:
-        f.write(f"  {llibres}")
+        f.write(f"  {llibre}")
     f.write("\n\t)\n")
 
     # init
