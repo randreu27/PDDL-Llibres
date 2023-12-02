@@ -13,7 +13,7 @@
 
 
 ;actions
-(:action legirllibre
+(:action llegirllibre
   :parameters (?ll)
   :precondition (and (delCataleg ?ll) (not (exists (?p) (and (predecessor ?p ?ll) (not (llegit ?p))))))
   :effect (and (llegit ?ll))
