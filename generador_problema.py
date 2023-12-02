@@ -42,7 +42,9 @@ def generar_problema(extensió=3, n=10, llavor=42):
     # PaginesLlibre
     if extensió == 3:
         for llibre in llibres:
-            f.write(f"\n    (= (PaginesLlibre {llibre}) {random.randint(50, 800)})")
+            # lognormal(mu, sigma) -> mu|mitjana = ln(350), sigma|stddev = 0.5
+            x = max(min(50, int(random.lognormvariate(5.858, 0.5))), 800)
+            f.write(f"\n    (= (PaginesLlibre {llibre}) {x})")
         f.write("\n")
 
     # predecessors
@@ -68,11 +70,11 @@ def generar_problema(extensió=3, n=10, llavor=42):
 
     # fluents
     if extensió >= 2:
-        f.write("\n (= (MesSeguent) 0)")
+        f.write("\n    (= (MesSeguent) 0)")
     if extensió == 3:
-        f.write("\n (= (PaginesMes) 0)")
+        f.write("\n    (= (PaginesMes) 0)")
 
-    f.write("  )\n")
+    f.write("\n  )")
 
     # goal
     f.write("\n  (:goal ")
