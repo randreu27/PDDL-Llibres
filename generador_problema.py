@@ -42,9 +42,7 @@ def generar_problema(extensió=3, n=10, llavor=42):
     # PaginesLlibre
     if extensió == 3:
         for llibre in llibres:
-            # lognormal(mu, sigma) -> mu|mitjana = ln(350), sigma|stddev = 0.5
-            # Restem un nombre aleatori entre 0 i 200 perquè no hi hagi tants llibres de 800 pàgines
-            x = min(max(50, int(random.lognormvariate(5.858, 0.5))), 800 - random.randint(0, 200))
+            x = min(max(50, int(random.lognormvariate(5.778, 0.4))), 800)
             f.write(f"\n    (= (PaginesLlibre {llibre}) {x})")
         f.write("\n")
 
@@ -71,11 +69,11 @@ def generar_problema(extensió=3, n=10, llavor=42):
 
     # fluents
     if extensió > 0:
-        f.write("\n    (= (MesSeguent) 0)\n")
+        f.write("\n    (= (MesSeguent) 0)")
     if extensió == 3:
-        f.write("\n    (= (PaginesMes) 0)\n")
+        f.write("\n    (= (PaginesMes) 0)")
 
-    f.write("  )")
+    f.write("\n  )")
 
     # goal
     f.write("\n  (:goal ")

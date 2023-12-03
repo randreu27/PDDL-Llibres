@@ -35,11 +35,9 @@ if args.o:
 if args.f:
     command.extend(["-f", args.f])
 elif args.e is not None and args.m:
-    print("Generant problema: Extensió", args.e, "amb", args.m, "llibres")
-    if args.ll:
-        generar_problema(args.e, args.m, args.ll)
-    else:
-        generar_problema(args.e, args.m)
+    print("Generant problema: Extensió", args.e, "amb", args.m, "llibres i llavor", args.ll)
+    args.ll = args.ll if args.ll is not None else 42
+    generar_problema(args.e, args.m, args.ll)
     command.extend(["-o", f"domini{args.e}.pddl", "-f", f"p{args.e}_{args.m}.pddl"])
 
 
@@ -50,6 +48,7 @@ for c in command:
 print()
 
 time.sleep(2)
+t0 = time.time()
 process = subprocess.Popen(command, stdout=subprocess.PIPE, text=True)
 
 # Captura la sortida a la variable resultat_pla
@@ -58,7 +57,13 @@ for line in process.stdout:
     print(line, end="")
     resultat_pla += line
 process.wait()
+delta_t = time.time() - t0
 
+# Imprimir el temps d'execució
+if args.e is not None and args.m:
+    print(f"Temps real Extensió {args.e} Mida {args.m} Llavor {args.ll}:", delta_t, "segons")
+else:
+    print("Temps real:", delta_t, "segons")
 
 # Diccionari per convertir números de mesos a lletres
 mesos_lletres = {
