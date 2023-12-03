@@ -25,7 +25,6 @@
     (predecessor A4 A7)
     (predecessor A2 B3)
     (predecessor A0 A6)
-    (predecessor A8 B2)
     (predecessor A9 B0)
     (predecessor A5 B4)
 

@@ -53,10 +53,11 @@ def generar_problema(extensió=3, n=10, llavor=42):
         a = llibres[x]
         b = llibres[random.randint(x + 1, n - 1)]
 
-        if extensió == 0 and b not in pred2:
-            pred2.add(b)
-            predecessors.append((a, b))
-            f.write(f"\n    (predecessor {a} {b})")
+        if extensió == 0:
+            if b not in pred2:
+                pred2.add(b)
+                predecessors.append((a, b))
+                f.write(f"\n    (predecessor {a} {b})")
         elif (a, b) not in predecessors:
             predecessors.append((a, b))
             f.write(f"\n    (predecessor {a} {b})")

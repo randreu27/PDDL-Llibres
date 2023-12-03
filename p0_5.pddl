@@ -14,7 +14,6 @@
     (predecessor A2 A4)
     (predecessor A1 A2)
     (predecessor A0 A3)
-    (predecessor A3 A4)
 
   )
   (:goal (forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll))))

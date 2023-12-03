@@ -44,11 +44,8 @@
     (predecessor C8 C9)
     (predecessor B0 C8)
     (predecessor B9 C0)
-    (predecessor C3 C7)
-    (predecessor A5 C8)
     (predecessor B4 C6)
     (predecessor B3 B9)
-    (predecessor A5 B3)
     (predecessor A1 A5)
     (predecessor A4 C1)
 
