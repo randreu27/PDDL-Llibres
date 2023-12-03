@@ -47,24 +47,30 @@ def generar_problema(extensió=3, n=10, llavor=42):
         f.write("\n")
 
     # predecessors
-    predecessors = []
+    predecessors, pred2 = [], set()
     for _ in range(random.randint(1, n)):
         x = random.randint(0, n - 2)
         a = llibres[x]
         b = llibres[random.randint(x + 1, n - 1)]
 
-        if (a, b) not in predecessors:
+        if extensió == 0 and b not in pred2:
+            pred2.add(b)
+            predecessors.append((a, b))
+            f.write(f"\n    (predecessor {a} {b})")
+        elif (a, b) not in predecessors:
             predecessors.append((a, b))
             f.write(f"\n    (predecessor {a} {b})")
     f.write("\n")
 
     # paral·lels
+    parallels = []
     if extensió >= 2:
         for _ in range(int(sqrt(random.randint(1, n)))):
             x = random.randint(0, n - 2)
             a, b = llibres[x], llibres[random.randint(x + 1, n - 1)]
-
-            f.write(f"\n    (parallel {a} {b})")
+            if (a, b) not in parallels:
+                parallels.append((a, b))
+                f.write(f"\n    (parallel {a} {b})")
         f.write("\n")
 
     # fluents
