@@ -1,0 +1,24 @@
+(define (problem p_2_5)
+  (:domain llibresnivell2)
+
+  (:objects
+	  A0  A1  A2  A3  A4
+	)
+  (:init
+    (delCataleg A0)
+    (delCataleg A1)
+    (delCataleg A2)
+    (delCataleg A3)
+    (delCataleg A4)
+
+    (predecessor A2 A4)
+    (predecessor A1 A2)
+    (predecessor A0 A3)
+    (predecessor A3 A4)
+
+    (parallel A0 A4)
+
+    (= (MesSeguent) 0)
+  )
+  (:goal (forall (?ll) (imply (not (exists (?ll2) (predecessor ?ll ?ll2))) (llegit ?ll))))
+)

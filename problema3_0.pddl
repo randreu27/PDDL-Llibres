@@ -176,8 +176,6 @@
     (parallel KANE_L_Ombra_De_La_Serp HO_La_Casa_D_Hades)
     (parallel KANE_L_Ombra_De_La_Serp HO_La_Sang_De_L_Olimp)
 
-    (llegit HP_I_El_Pres_D_Azkaban)
-
 
     (= (MesSeguent) 0)
     (= (PaginesMes) 0)

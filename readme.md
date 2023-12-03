@@ -36,3 +36,16 @@ python
 >> from generador_problema import generar_problema
 >> generar_problema(2, 15, 73)
 ```
+
+## Experiments
+Els experiments s'han realitzat amb el fitxer experiments.py, que executa 10 iteracions (amb llavors del 0 al 9) de cada problema amb mateixa entensió i mida, i guarda el temps d'execució real (el comptador de temps de metricff no és gaire fiable a Windows) de cada execució i també calcula la mitjana.
+```python
+python experiments.py
+```
+Si un problema triga més d'un nombre determinat de segons que depèn de l'extensió i la mida del problema, s'atura l'execució i es passa al següent problema.
+
+## Interpretació i visualització dels resultats
+Els resultats s'han interpretat i visualitzat amb el fitxer interpretvisual.py, que mostra els resultats de cada problema en un boxplot i un diagrama on compara els temps de cada problema segons la seva extensió i mida.
+```python
+python interpretvisual.py
+```
