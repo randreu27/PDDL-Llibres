@@ -4,15 +4,15 @@ from math import sqrt
 
 def generar_problema(extensió=3, n=10, llavor=42):
     assert n >= 2, "El nombre de llibres ha de ser com a mínim 2"
-    assert n <= 2600, "No hi ha prou lletres per a representar tots els llibres"
+    assert n <= 260, "La mida màxima del problema és de 260 llibres"
 
     # només afegim els llibres que necessitem
     llibres, i = [], 0
     for lletra in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
         if len(llibres) >= n:
             break
-        while i < 100 and len(llibres) < n:
-            llibres.append(f"{lletra}{i:02d}")
+        while i < 10 and len(llibres) < n:
+            llibres.append(f"{lletra}{i}")
             i += 1
         i = 0
 
@@ -43,13 +43,14 @@ def generar_problema(extensió=3, n=10, llavor=42):
     if extensió == 3:
         for llibre in llibres:
             # lognormal(mu, sigma) -> mu|mitjana = ln(350), sigma|stddev = 0.5
-            x = max(min(50, int(random.lognormvariate(5.858, 0.5))), 800)
+            # Restem un nombre aleatori entre 0 i 200 perquè no hi hagi tants llibres de 800 pàgines
+            x = min(max(50, int(random.lognormvariate(5.858, 0.5))), 800 - random.randint(0, 200))
             f.write(f"\n    (= (PaginesLlibre {llibre}) {x})")
         f.write("\n")
 
     # predecessors
     predecessors = []
-    for _ in range(random.randint(1, n//2)):
+    for _ in range(random.randint(1, n)):
         x = random.randint(0, n - 2)
         a = llibres[x]
         b = llibres[random.randint(x + 1, n - 1)]
@@ -69,12 +70,12 @@ def generar_problema(extensió=3, n=10, llavor=42):
         f.write("\n")
 
     # fluents
-    if extensió >= 2:
-        f.write("\n    (= (MesSeguent) 0)")
+    if extensió > 0:
+        f.write("\n    (= (MesSeguent) 0)\n")
     if extensió == 3:
-        f.write("\n    (= (PaginesMes) 0)")
+        f.write("\n    (= (PaginesMes) 0)\n")
 
-    f.write("\n  )")
+    f.write("  )")
 
     # goal
     f.write("\n  (:goal ")
