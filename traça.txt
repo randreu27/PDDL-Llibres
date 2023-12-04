@@ -1,0 +1,866 @@
+Resultat de l'execució dels problemes amb pla.py, per tenir el temps real i la interpretació en mesos reals.
+
+Problema 0_0
+
+Cueing down from goal distance:    7 into depth [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0
+
+ff: found legal plan as follows
+
+step    0: LLEGIR_LLIBRE HP_I_LA_PEDRA_FILOSOFAL
+        1: LLEGIR_LLIBRE HP_I_LA_CAMBRA_SECRETA
+        2: LLEGIR_LLIBRE HP_I_EL_PRES_DE_AZKABAN
+        3: LLEGIR_LLIBRE HP_I_EL_CALZE_DE_FOC
+        4: LLEGIR_LLIBRE HP_I_LA_ORDRE_DEL_FENIX
+        5: LLEGIR_LLIBRE HP_I_EL_MISTERI_DEL_PRINCEP
+        6: LLEGIR_LLIBRE HP_I_LES_RELIQUIES_DE_LA_MORT
+
+
+time spent:    0.00 seconds instantiating 0 easy, 13 hard action templates
+               0.00 seconds reachability analysis, yielding 13 facts and 13 actions
+               0.00 seconds creating final representation with 13 relevant facts, 0 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 8 states, to a max depth of 1
+               0.00 seconds total time
+
+Temps real: 0.20860934257507324 segons
+
+
+Llibres que cal llegir cada mes:
+
+Desembre 2023:
+  HP_I_LA_PEDRA_FILOSOFAL
+  HP_I_LA_CAMBRA_SECRETA
+  HP_I_EL_PRES_DE_AZKABAN
+  HP_I_EL_CALZE_DE_FOC
+  HP_I_LA_ORDRE_DEL_FENIX
+  HP_I_EL_MISTERI_DEL_PRINCEP
+  HP_I_LES_RELIQUIES_DE_LA_MORT
+
+
+
+Problema 0_1
+
+Cueing down from goal distance:   13 into depth [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0
+
+ff: found legal plan as follows
+
+step    0: LLEGIR_LLIBRE HP_I_LA_PEDRA_FILOSOFAL
+        1: LLEGIR_LLIBRE PJ_EL_LLADRE_DEL_LLAMPEC
+        2: LLEGIR_LLIBRE HP_I_LA_CAMBRA_SECRETA
+        3: LLEGIR_LLIBRE PJ_EL_MAR_DELS_MONSTRES
+        4: LLEGIR_LLIBRE HP_I_EL_PRES_DE_AZKABAN
+        5: LLEGIR_LLIBRE PJ_LA_MALEDICCIO_DEL_TITA
+        6: LLEGIR_LLIBRE HP_I_EL_CALZE_DE_FOC
+        7: LLEGIR_LLIBRE PJ_LA_BATALLA_DEL_LABERINT
+        8: LLEGIR_LLIBRE HP_I_LA_ORDRE_DEL_FENIX
+        9: LLEGIR_LLIBRE PJ_L_ULTIM_HEROI_DE_L_OLIMP
+       10: LLEGIR_LLIBRE HP_I_EL_MISTERI_DEL_PRINCEP
+       11: LLEGIR_LLIBRE PJ_EL_CALZE_DELS_DEUS
+       12: LLEGIR_LLIBRE HP_I_LES_RELIQUIES_DE_LA_MORT
+
+
+time spent:    0.00 seconds instantiating 0 easy, 13 hard action templates
+               0.00 seconds reachability analysis, yielding 13 facts and 13 actions
+               0.00 seconds creating final representation with 13 relevant facts, 0 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 14 states, to a max depth of 1
+               0.00 seconds total time
+
+Temps real: 0.05429887771606445 segons
+
+
+Llibres que cal llegir cada mes:
+
+Desembre 2023:
+  HP_I_LA_PEDRA_FILOSOFAL
+  PJ_EL_LLADRE_DEL_LLAMPEC
+  HP_I_LA_CAMBRA_SECRETA
+  PJ_EL_MAR_DELS_MONSTRES
+  HP_I_EL_PRES_DE_AZKABAN
+  PJ_LA_MALEDICCIO_DEL_TITA
+  HP_I_EL_CALZE_DE_FOC
+  PJ_LA_BATALLA_DEL_LABERINT
+  HP_I_LA_ORDRE_DEL_FENIX
+  PJ_L_ULTIM_HEROI_DE_L_OLIMP
+  HP_I_EL_MISTERI_DEL_PRINCEP
+  PJ_EL_CALZE_DELS_DEUS
+  HP_I_LES_RELIQUIES_DE_LA_MORT
+
+
+
+Problema 1_0
+
+Cueing down from goal distance:   13 into depth [1][2]
+                                  12            [1]
+                                  11            [1][2]
+                                  10            [1]
+                                   9            [1][2]
+                                   8            [1]
+                                   7            [1][2]
+                                   6            [1]
+                                   5            [1][2]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1][2]
+                                   1            [1]
+                                   0
+
+ff: found legal plan as follows
+
+step    0: LLEGIR_LLIBRE_AUXILIAR HP_I_LA_PEDRA_FILOSOFAL
+        1: LLEGIR_LLIBRE PJ_EL_LLADRE_DEL_LLAMPEC
+        2: SEGUENT_MES
+        3: LLEGIR_LLIBRE_AUXILIAR HP_I_LA_CAMBRA_SECRETA
+        4: LLEGIR_LLIBRE PJ_EL_MAR_DELS_MONSTRES
+        5: SEGUENT_MES
+        6: LLEGIR_LLIBRE_AUXILIAR HP_I_EL_PRES_DE_AZKABAN
+        7: LLEGIR_LLIBRE PJ_LA_MALEDICCIO_DEL_TITA
+        8: SEGUENT_MES
+        9: LLEGIR_LLIBRE_AUXILIAR HP_I_EL_CALZE_DE_FOC
+       10: LLEGIR_LLIBRE PJ_LA_BATALLA_DEL_LABERINT
+       11: SEGUENT_MES
+       12: LLEGIR_LLIBRE_AUXILIAR HP_I_LA_ORDRE_DEL_FENIX
+       13: LLEGIR_LLIBRE PJ_L_ULTIM_HEROI_DE_L_OLIMP
+       14: SEGUENT_MES
+       15: LLEGIR_LLIBRE_AUXILIAR PJ_EL_CALZE_DELS_DEUS
+       16: LLEGIR_LLIBRE HP_I_EL_MISTERI_DEL_PRINCEP
+       17: SEGUENT_MES
+       18: LLEGIR_LLIBRE_AUXILIAR HP_I_LES_RELIQUIES_DE_LA_MORT
+
+
+time spent:    0.00 seconds instantiating 0 easy, 52 hard action templates
+               0.00 seconds reachability analysis, yielding 65 facts and 52 actions
+               0.00 seconds creating final representation with 65 relevant facts, 2 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 55 states, to a max depth of 2
+               0.00 seconds total time
+
+Temps real: 0.0725855827331543 segons
+
+
+Llibres que cal llegir cada mes:
+
+Desembre 2023:
+  HP_I_LA_PEDRA_FILOSOFAL
+  PJ_EL_LLADRE_DEL_LLAMPEC
+
+Gener 2024:
+  HP_I_LA_CAMBRA_SECRETA
+  PJ_EL_MAR_DELS_MONSTRES
+
+Febrer 2024:
+  HP_I_EL_PRES_DE_AZKABAN
+  PJ_LA_MALEDICCIO_DEL_TITA
+
+Març 2024:
+  HP_I_EL_CALZE_DE_FOC
+  PJ_LA_BATALLA_DEL_LABERINT
+
+Abril 2024:
+  HP_I_LA_ORDRE_DEL_FENIX
+  PJ_L_ULTIM_HEROI_DE_L_OLIMP
+
+Maig 2024:
+  PJ_EL_CALZE_DELS_DEUS
+  HP_I_EL_MISTERI_DEL_PRINCEP
+
+Juny 2024:
+  HP_I_LES_RELIQUIES_DE_LA_MORT
+
+
+
+Problema 1_1
+
+Cueing down from goal distance:   18 into depth [1][2]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1]
+                                  14            [1]
+                                  13            [1][2]
+                                  12            [1]
+                                  11            [1][2]
+                                  10            [1]
+                                   9            [1][2]
+                                   8            [1]
+                                   7            [1][2]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1][2]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0
+
+ff: found legal plan as follows
+
+step    0: LLEGIR_LLIBRE_AUXILIAR HP_I_LA_PEDRA_FILOSOFAL
+        1: LLEGIR_LLIBRE_AUXILIAR PJ_EL_LLADRE_DEL_LLAMPEC
+        2: LLEGIR_LLIBRE_AUXILIAR APUNTS_PA1
+        3: LLEGIR_LLIBRE_AUXILIAR APUNTS_CRA
+        4: LLEGIR_LLIBRE APUNTS_FM
+        5: SEGUENT_MES
+        6: LLEGIR_LLIBRE_AUXILIAR HP_I_LA_CAMBRA_SECRETA
+        7: LLEGIR_LLIBRE PJ_EL_MAR_DELS_MONSTRES
+        8: SEGUENT_MES
+        9: LLEGIR_LLIBRE_AUXILIAR HP_I_EL_PRES_DE_AZKABAN
+       10: LLEGIR_LLIBRE PJ_LA_MALEDICCIO_DEL_TITA
+       11: SEGUENT_MES
+       12: LLEGIR_LLIBRE_AUXILIAR HP_I_EL_CALZE_DE_FOC
+       13: LLEGIR_LLIBRE PJ_LA_BATALLA_DEL_LABERINT
+       14: SEGUENT_MES
+       15: LLEGIR_LLIBRE_AUXILIAR HP_I_LA_ORDRE_DEL_FENIX
+       16: LLEGIR_LLIBRE APUNTS_PA2
+       17: SEGUENT_MES
+       18: LLEGIR_LLIBRE_AUXILIAR APUNTS_ABIA
+       19: LLEGIR_LLIBRE_AUXILIAR PJ_L_ULTIM_HEROI_DE_L_OLIMP
+       20: LLEGIR_LLIBRE HP_I_EL_MISTERI_DEL_PRINCEP
+       21: SEGUENT_MES
+       22: LLEGIR_LLIBRE_AUXILIAR PJ_EL_CALZE_DELS_DEUS
+       23: LLEGIR_LLIBRE_AUXILIAR HP_I_LES_RELIQUIES_DE_LA_MORT
+
+
+time spent:    0.00 seconds instantiating 0 easy, 72 hard action templates
+               0.00 seconds reachability analysis, yielding 90 facts and 72 actions
+               0.00 seconds creating final representation with 90 relevant facts, 2 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 67 states, to a max depth of 2
+               0.00 seconds total time
+
+Temps real: 0.07622122764587402 segons
+
+
+Llibres que cal llegir cada mes:
+
+Desembre 2023:
+  HP_I_LA_PEDRA_FILOSOFAL
+  PJ_EL_LLADRE_DEL_LLAMPEC
+  APUNTS_PA1
+  APUNTS_CRA
+  APUNTS_FM
+
+Gener 2024:
+  HP_I_LA_CAMBRA_SECRETA
+  PJ_EL_MAR_DELS_MONSTRES
+
+Febrer 2024:
+  HP_I_EL_PRES_DE_AZKABAN
+  PJ_LA_MALEDICCIO_DEL_TITA
+
+Març 2024:
+  HP_I_EL_CALZE_DE_FOC
+  PJ_LA_BATALLA_DEL_LABERINT
+
+Abril 2024:
+  HP_I_LA_ORDRE_DEL_FENIX
+  APUNTS_PA2
+
+Maig 2024:
+  APUNTS_ABIA
+  PJ_L_ULTIM_HEROI_DE_L_OLIMP
+  HP_I_EL_MISTERI_DEL_PRINCEP
+
+Juny 2024:
+  PJ_EL_CALZE_DELS_DEUS
+  HP_I_LES_RELIQUIES_DE_LA_MORT
+
+
+
+Problema 2_0
+
+Cueing down from goal distance:   16 into depth [1][2]
+                                  15            [1]
+                                  14            [1][2]
+                                  13            [1]
+                                  12            [1][2]
+                                  11            [1]
+                                  10            [1][2]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1][2][3]
+                                   6            [1][2][3]
+                                   5            [1][2][3]
+                                   4            [1][2][3]
+                                   3            [1][2][3]
+                                   2            [1][2][3]
+                                   1            [1]
+                                   0
+
+ff: found legal plan as follows
+
+step    0: LLEGIR_LLIBRE_AUXILIAR PJ_EL_LLADRE_DEL_LLAMPEC
+        1: LLEGIR_LLIBRE APUNTS_PA1
+        2: SEGUENT_MES
+        3: LLEGIR_LLIBRE_AUXILIAR PJ_EL_MAR_DELS_MONSTRES
+        4: LLEGIR_LLIBRE APUNTS_PA2
+        5: SEGUENT_MES
+        6: LLEGIR_LLIBRE_AUXILIAR PJ_LA_MALEDICCIO_DEL_TITA
+        7: LLEGIR_LLIBRE APUNTS_CRA
+        8: SEGUENT_MES
+        9: LLEGIR_LLIBRE_AUXILIAR PJ_LA_BATALLA_DEL_LABERINT
+       10: LLEGIR_LLIBRE APUNTS_FM
+       11: SEGUENT_MES
+       12: LLEGIR_LLIBRE_AUXILIAR APUNTS_ABIA
+       13: LLEGIR_LLIBRE_AUXILIAR PJ_L_ULTIM_HEROI_DE_L_OLIMP
+       14: LLEGIR_LLIBRE KANE_LA_PIRAMIDE_VERMELLA
+       15: SEGUENT_MES
+       16: LLEGIR_LLIBRE_AUXILIAR HO_L_HEROI_PERDUT
+       17: LLEGIR_LLIBRE KANE_EL_TRON_DE_FOC
+       18: SEGUENT_MES
+       19: LLEGIR_LLIBRE_AUXILIAR HO_EL_FILL_DE_NEPTU
+       20: LLEGIR_LLIBRE KANE_L_OMBRA_DE_LA_SERP
+       21: SEGUENT_MES
+       22: LLEGIR_LLIBRE_AUXILIAR HO_LA_MARCA_D_ATENA
+       23: LLEGIR_LLIBRE ELS_HEROIS_GRECS
+       24: SEGUENT_MES
+       25: LLEGIR_LLIBRE_AUXILIAR HO_LA_CASA_D_HADES
+       26: LLEGIR_LLIBRE ELS_DEUS_GRECS
+       27: SEGUENT_MES
+       28: LLEGIR_LLIBRE_AUXILIAR HO_LA_SANG_DE_L_OLIMP
+       29: LLEGIR_LLIBRE HP_I_LA_PEDRA_FILOSOFAL
+       30: SEGUENT_MES
+       31: LLEGIR_LLIBRE_AUXILIAR PJ_EL_CALZE_DELS_DEUS
+
+
+time spent:    0.00 seconds instantiating 0 easy, 106 hard action templates
+               0.00 seconds reachability analysis, yielding 164 facts and 96 actions
+               0.00 seconds creating final representation with 154 relevant facts, 2 relevant fluents        
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 68 states, to a max depth of 3
+               0.00 seconds total time
+
+Temps real: 0.12008500099182129 segons
+
+
+Llibres que cal llegir cada mes:
+
+Desembre 2023:
+  PJ_EL_LLADRE_DEL_LLAMPEC
+  APUNTS_PA1
+
+Gener 2024:
+  PJ_EL_MAR_DELS_MONSTRES
+  APUNTS_PA2
+
+Febrer 2024:
+  PJ_LA_MALEDICCIO_DEL_TITA
+  APUNTS_CRA
+
+Març 2024:
+  PJ_LA_BATALLA_DEL_LABERINT
+  APUNTS_FM
+
+Abril 2024:
+  APUNTS_ABIA
+  PJ_L_ULTIM_HEROI_DE_L_OLIMP
+  KANE_LA_PIRAMIDE_VERMELLA
+
+Maig 2024:
+  HO_L_HEROI_PERDUT
+  KANE_EL_TRON_DE_FOC
+
+Juny 2024:
+  HO_EL_FILL_DE_NEPTU
+  KANE_L_OMBRA_DE_LA_SERP
+
+Juliol 2024:
+  HO_LA_MARCA_D_ATENA
+  ELS_HEROIS_GRECS
+
+Agost 2024:
+  HO_LA_CASA_D_HADES
+  ELS_DEUS_GRECS
+
+Setembre 2024:
+  HO_LA_SANG_DE_L_OLIMP
+  HP_I_LA_PEDRA_FILOSOFAL
+
+Octubre 2024:
+  PJ_EL_CALZE_DELS_DEUS
+
+
+
+Problema 2_1 (Optimitzat, sinó la memòria peta)
+
+advancing to distance:   23
+                         22
+                         21
+                         20
+                         19
+                         18
+                         17
+                         16
+                         15
+                         14
+                         13
+                         12
+                         11
+                         10
+                          9
+                          8
+                          7
+                          6
+                          5
+                          4
+                          3
+                          2
+                          1
+                          0
+
+ff: found legal plan as follows
+
+step    0: LLEGIR_LLIBRE HP_I_LA_PEDRA_FILOSOFAL
+        1: LLEGIR_LLIBRE_AUXILIAR PJ_EL_LLADRE_DEL_LLAMPEC
+        2: LLEGIR_LLIBRE_AUXILIAR APUNTS_PA1
+        3: LLEGIR_LLIBRE_AUXILIAR APUNTS_CRA
+        4: LLEGIR_LLIBRE_AUXILIAR APUNTS_FM
+        5: SEGUENT_MES
+        6: LLEGIR_LLIBRE HP_I_LA_CAMBRA_SECRETA
+        7: LLEGIR_LLIBRE_AUXILIAR APUNTS_PA2
+        8: SEGUENT_MES
+        9: LLEGIR_LLIBRE_AUXILIAR APUNTS_ABIA
+       10: LLEGIR_LLIBRE HP_I_EL_PRES_D_AZKABAN
+       11: LLEGIR_LLIBRE_AUXILIAR PJ_EL_MAR_DELS_MONSTRES
+       12: SEGUENT_MES
+       13: LLEGIR_LLIBRE HP_I_EL_CALZE_DE_FOC
+       14: LLEGIR_LLIBRE_AUXILIAR PJ_LA_MALEDICCIO_DEL_TITA
+       15: SEGUENT_MES
+       16: LLEGIR_LLIBRE HP_I_LA_ORDRE_DEL_FENIX
+       17: LLEGIR_LLIBRE_AUXILIAR PJ_LA_BATALLA_DEL_LABERINT
+       18: SEGUENT_MES
+       19: LLEGIR_LLIBRE HP_I_EL_MISTERI_DEL_PRINCEP
+       20: SEGUENT_MES
+       21: LLEGIR_LLIBRE HP_I_LES_RELIQUIES_DE_LA_MORT
+       22: LLEGIR_LLIBRE_AUXILIAR PJ_L_ULTIM_HEROI_DE_L_OLIMP
+       23: SEGUENT_MES
+       24: LLEGIR_LLIBRE KANE_LA_PIRAMIDE_VERMELLA
+       25: LLEGIR_LLIBRE_AUXILIAR HO_L_HEROI_PERDUT
+       26: SEGUENT_MES
+       27: LLEGIR_LLIBRE KANE_EL_TRON_DE_FOC
+       28: LLEGIR_LLIBRE_AUXILIAR HO_EL_FILL_DE_NEPTU
+       29: SEGUENT_MES
+       30: LLEGIR_LLIBRE KANE_L_OMBRA_DE_LA_SERP
+       31: LLEGIR_LLIBRE_AUXILIAR HO_LA_MARCA_D_ATENA
+       32: SEGUENT_MES
+       33: LLEGIR_LLIBRE ELS_HEROIS_GRECS
+       34: LLEGIR_LLIBRE_AUXILIAR HO_LA_CASA_D_HADES
+       35: SEGUENT_MES
+       36: LLEGIR_LLIBRE ELS_DEUS_GRECS
+       37: LLEGIR_LLIBRE_AUXILIAR HO_LA_SANG_DE_L_OLIMP
+       38: SEGUENT_MES
+       39: LLEGIR_LLIBRE PJ_EL_CALZE_DELS_DEUS
+
+
+time spent:    0.00 seconds instantiating 0 easy, 106 hard action templates
+               0.00 seconds reachability analysis, yielding 164 facts and 96 actions
+               0.00 seconds creating final representation with 154 relevant facts, 2 relevant fluents        
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+              25.62 seconds searching, evaluating 15894 states, to a max depth of 0
+              25.62 seconds total time
+
+Temps real: 3.8977620601654053 segons
+
+
+Llibres que cal llegir cada mes:
+
+Desembre 2023:
+  HP_I_LA_PEDRA_FILOSOFAL
+  PJ_EL_LLADRE_DEL_LLAMPEC
+  APUNTS_PA1
+  APUNTS_CRA
+  APUNTS_FM
+
+Gener 2024:
+  HP_I_LA_CAMBRA_SECRETA
+  APUNTS_PA2
+
+Febrer 2024:
+  APUNTS_ABIA
+  HP_I_EL_PRES_D_AZKABAN
+  PJ_EL_MAR_DELS_MONSTRES
+
+Març 2024:
+  HP_I_EL_CALZE_DE_FOC
+  PJ_LA_MALEDICCIO_DEL_TITA
+
+Abril 2024:
+  HP_I_LA_ORDRE_DEL_FENIX
+  PJ_LA_BATALLA_DEL_LABERINT
+
+Maig 2024:
+  HP_I_EL_MISTERI_DEL_PRINCEP
+
+Juny 2024:
+  HP_I_LES_RELIQUIES_DE_LA_MORT
+  PJ_L_ULTIM_HEROI_DE_L_OLIMP
+
+Juliol 2024:
+  KANE_LA_PIRAMIDE_VERMELLA
+  HO_L_HEROI_PERDUT
+
+Agost 2024:
+  KANE_EL_TRON_DE_FOC
+  HO_EL_FILL_DE_NEPTU
+
+Setembre 2024:
+  KANE_L_OMBRA_DE_LA_SERP
+  HO_LA_MARCA_D_ATENA
+
+Octubre 2024:
+  ELS_HEROIS_GRECS
+  HO_LA_CASA_D_HADES
+
+Novembre 2024:
+  ELS_DEUS_GRECS
+  HO_LA_SANG_DE_L_OLIMP
+
+Desembre 2024:
+  PJ_EL_CALZE_DELS_DEUS
+
+
+
+Problema 3_0
+
+Cueing down from goal distance:   16 into depth [1][2]
+                                  15            [1]
+                                  14            [1][2]
+                                  13            [1]
+                                  12            [1][2]
+                                  11            [1]
+                                  10            [1][2]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1] --- pruning stopped --- [1][2][3][4][5]
+                                   6            [1] --- pruning stopped --- [1][2][3][4][5][6][7][8][9][10][11][12][13][14][15][16][17][18][19]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+
+advancing to distance:   16
+                         15
+                         14
+                         13
+                         12
+                         11
+                         10
+                          9
+                          8
+                          7
+                          6
+                          5
+                          4
+                          3
+                          2
+                          1
+                          0
+
+ff: found legal plan as follows
+
+step    0: LLEGIR_LLIBRE APUNTS_PA1
+        1: LLEGIR_LLIBRE_AUXILIAR PJ_EL_LLADRE_DEL_LLAMPEC
+        2: SEGUENT_MES
+        3: LLEGIR_LLIBRE HP_I_LA_PEDRA_FILOSOFAL
+        4: LLEGIR_LLIBRE_AUXILIAR PJ_EL_MAR_DELS_MONSTRES
+        5: SEGUENT_MES
+        6: LLEGIR_LLIBRE KANE_LA_PIRAMIDE_VERMELLA
+        7: SEGUENT_MES
+        8: LLEGIR_LLIBRE KANE_EL_TRON_DE_FOC
+        9: LLEGIR_LLIBRE_AUXILIAR PJ_LA_MALEDICCIO_DEL_TITA
+       10: SEGUENT_MES
+       11: LLEGIR_LLIBRE ELS_DEUS_GRECS
+       12: LLEGIR_LLIBRE_AUXILIAR PJ_LA_BATALLA_DEL_LABERINT
+       13: SEGUENT_MES
+       14: LLEGIR_LLIBRE KANE_L_OMBRA_DE_LA_SERP
+       15: LLEGIR_LLIBRE_AUXILIAR PJ_L_ULTIM_HEROI_DE_L_OLIMP
+       16: SEGUENT_MES
+       17: LLEGIR_LLIBRE APUNTS_PA2
+       18: LLEGIR_LLIBRE_AUXILIAR HO_L_HEROI_PERDUT
+       19: SEGUENT_MES
+       20: LLEGIR_LLIBRE HP_I_LA_CAMBRA_SECRETA
+       21: LLEGIR_LLIBRE_AUXILIAR HO_EL_FILL_DE_NEPTU
+       22: SEGUENT_MES
+       23: LLEGIR_LLIBRE APUNTS_CRA
+       24: LLEGIR_LLIBRE_AUXILIAR HO_LA_MARCA_D_ATENA
+       25: SEGUENT_MES
+       26: LLEGIR_LLIBRE APUNTS_FM
+       27: LLEGIR_LLIBRE_AUXILIAR HO_LA_CASA_D_HADES
+       28: SEGUENT_MES
+       29: LLEGIR_LLIBRE APUNTS_ABIA
+       30: LLEGIR_LLIBRE_AUXILIAR HO_LA_SANG_DE_L_OLIMP
+       31: SEGUENT_MES
+       32: LLEGIR_LLIBRE PJ_EL_CALZE_DELS_DEUS
+
+
+time spent:    0.00 seconds instantiating 0 easy, 106 hard action templates
+               0.00 seconds reachability analysis, yielding 164 facts and 96 actions
+               0.00 seconds creating final representation with 154 relevant facts, 4 relevant fluents        
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+             349.37 seconds searching, evaluating 144223 states, to a max depth of 19
+             349.37 seconds total time
+
+Temps real: 63.647573471069336 segons
+
+
+Llibres que cal llegir cada mes:
+
+Desembre 2023:
+  APUNTS_PA1
+  PJ_EL_LLADRE_DEL_LLAMPEC
+
+Gener 2024:
+  HP_I_LA_PEDRA_FILOSOFAL
+  PJ_EL_MAR_DELS_MONSTRES
+
+Febrer 2024:
+  KANE_LA_PIRAMIDE_VERMELLA
+
+Març 2024:
+  KANE_EL_TRON_DE_FOC
+  PJ_LA_MALEDICCIO_DEL_TITA
+
+Abril 2024:
+  ELS_DEUS_GRECS
+  PJ_LA_BATALLA_DEL_LABERINT
+
+Maig 2024:
+  KANE_L_OMBRA_DE_LA_SERP
+  PJ_L_ULTIM_HEROI_DE_L_OLIMP
+
+Juny 2024:
+  APUNTS_PA2
+  HO_L_HEROI_PERDUT
+
+Juliol 2024:
+  HP_I_LA_CAMBRA_SECRETA
+  HO_EL_FILL_DE_NEPTU
+
+Agost 2024:
+  APUNTS_CRA
+  HO_LA_MARCA_D_ATENA
+
+Setembre 2024:
+  APUNTS_FM
+  HO_LA_CASA_D_HADES
+
+Octubre 2024:
+  APUNTS_ABIA
+  HO_LA_SANG_DE_L_OLIMP
+
+Novembre 2024:
+  PJ_EL_CALZE_DELS_DEUS
+
+
+
+Problema 3_1
+
+Cueing down from goal distance:   29 into depth [1][2]
+                                  28            [1]
+                                  27            [1][2]
+                                  26            [1]
+                                  25            [1][2]
+                                  24            [1]
+                                  23            [1][2]
+                                  22            [1]
+                                  21            [1][2]
+                                  20            [1]
+                                  19            [1][2]
+                                  18            [1][2]
+                                  17            [1]
+                                  16            [1][2]
+                                  15            [1][2]
+                                  14            [1]
+                                  13            [1][2]
+                                  12            [1][2]
+                                  11            [1]
+                                  10            [1][2]
+                                   9            [1]
+                                   8            [1][2]
+                                   7            [1][2]
+                                   6            [1] --- pruning stopped --- [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+
+advancing to distance:   29
+                         28
+                         27
+                         26
+                         25
+                         24
+                         23
+                         22
+                         21
+                         20
+                         19
+                         18
+                         17
+                         16
+                         15
+                         14
+                         13
+                         12
+                         11
+                         10
+                          9
+                          8
+                          7
+                          6
+                          5
+                          4
+                          3
+                          2
+                          1
+                          0
+
+ff: found legal plan as follows
+
+step    0: LLEGIR_LLIBRE HP_I_LA_PEDRA_FILOSOFAL
+        1: LLEGIR_LLIBRE_AUXILIAR PJ_EL_LLADRE_DEL_LLAMPEC
+        2: LLEGIR_LLIBRE_AUXILIAR APUNTS_PA1
+        3: SEGUENT_MES
+        4: LLEGIR_LLIBRE ELS_HEROIS_GRECS
+        5: LLEGIR_LLIBRE_AUXILIAR PJ_EL_MAR_DELS_MONSTRES
+        6: SEGUENT_MES
+        7: LLEGIR_LLIBRE KANE_LA_PIRAMIDE_VERMELLA
+        8: SEGUENT_MES
+        9: LLEGIR_LLIBRE KANE_EL_TRON_DE_FOC
+       10: LLEGIR_LLIBRE_AUXILIAR PJ_LA_MALEDICCIO_DEL_TITA
+       11: SEGUENT_MES
+       12: LLEGIR_LLIBRE ELS_DEUS_GRECS
+       13: LLEGIR_LLIBRE_AUXILIAR PJ_LA_BATALLA_DEL_LABERINT
+       14: SEGUENT_MES
+       15: LLEGIR_LLIBRE KANE_L_OMBRA_DE_LA_SERP
+       16: LLEGIR_LLIBRE_AUXILIAR PJ_L_ULTIM_HEROI_DE_L_OLIMP
+       17: SEGUENT_MES
+       18: LLEGIR_LLIBRE APUNTS_PA2
+       19: LLEGIR_LLIBRE_AUXILIAR HO_L_HEROI_PERDUT
+       20: SEGUENT_MES
+       21: LLEGIR_LLIBRE HP_I_LA_CAMBRA_SECRETA
+       22: LLEGIR_LLIBRE_AUXILIAR HO_EL_FILL_DE_NEPTU
+       23: SEGUENT_MES
+       24: LLEGIR_LLIBRE HP_I_EL_PRES_D_AZKABAN
+       25: SEGUENT_MES
+       26: LLEGIR_LLIBRE HP_I_EL_CALZE_DE_FOC
+       27: SEGUENT_MES
+       28: LLEGIR_LLIBRE HP_I_LA_ORDRE_DEL_FENIX
+       29: SEGUENT_MES
+       30: LLEGIR_LLIBRE HP_I_EL_MISTERI_DEL_PRINCEP
+       31: SEGUENT_MES
+       32: LLEGIR_LLIBRE HP_I_LES_RELIQUIES_DE_LA_MORT
+       33: SEGUENT_MES
+       34: LLEGIR_LLIBRE APUNTS_CRA
+       35: LLEGIR_LLIBRE_AUXILIAR HO_LA_MARCA_D_ATENA
+       36: SEGUENT_MES
+       37: LLEGIR_LLIBRE APUNTS_FM
+       38: LLEGIR_LLIBRE_AUXILIAR HO_LA_CASA_D_HADES
+       39: SEGUENT_MES
+       40: LLEGIR_LLIBRE APUNTS_ABIA
+       41: LLEGIR_LLIBRE_AUXILIAR HO_LA_SANG_DE_L_OLIMP
+       42: SEGUENT_MES
+       43: LLEGIR_LLIBRE_AUXILIAR MAGS_I_SEMIDEUS
+       44: LLEGIR_LLIBRE PJ_EL_CALZE_DELS_DEUS
+
+
+time spent:    0.00 seconds instantiating 0 easy, 106 hard action templates
+               0.00 seconds reachability analysis, yielding 164 facts and 96 actions
+               0.00 seconds creating final representation with 154 relevant facts, 4 relevant fluents        
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+             482.65 seconds searching, evaluating 200449 states, to a max depth of 2
+             482.65 seconds total time
+
+Temps real: 80.91001558303833 segons
+
+
+Llibres que cal llegir cada mes:
+
+Desembre 2023:
+  HP_I_LA_PEDRA_FILOSOFAL
+  PJ_EL_LLADRE_DEL_LLAMPEC
+  APUNTS_PA1
+
+Gener 2024:
+  ELS_HEROIS_GRECS
+  PJ_EL_MAR_DELS_MONSTRES
+
+Febrer 2024:
+  KANE_LA_PIRAMIDE_VERMELLA
+
+Març 2024:
+  KANE_EL_TRON_DE_FOC
+  PJ_LA_MALEDICCIO_DEL_TITA
+
+Abril 2024:
+  ELS_DEUS_GRECS
+  PJ_LA_BATALLA_DEL_LABERINT
+
+Maig 2024:
+  KANE_L_OMBRA_DE_LA_SERP
+  PJ_L_ULTIM_HEROI_DE_L_OLIMP
+
+Juny 2024:
+  APUNTS_PA2
+  HO_L_HEROI_PERDUT
+
+Juliol 2024:
+  HP_I_LA_CAMBRA_SECRETA
+  HO_EL_FILL_DE_NEPTU
+
+Agost 2024:
+  HP_I_EL_PRES_D_AZKABAN
+
+Setembre 2024:
+  HP_I_EL_CALZE_DE_FOC
+
+Octubre 2024:
+  HP_I_LA_ORDRE_DEL_FENIX
+
+Novembre 2024:
+  HP_I_EL_MISTERI_DEL_PRINCEP
+
+Desembre 2024:
+  HP_I_LES_RELIQUIES_DE_LA_MORT
+
+Gener 2025:
+  APUNTS_CRA
+  HO_LA_MARCA_D_ATENA
+
+Febrer 2025:
+  APUNTS_FM
+  HO_LA_CASA_D_HADES
+
+Març 2025:
+  APUNTS_ABIA
+  HO_LA_SANG_DE_L_OLIMP
+
+Abril 2025:
+  MAGS_I_SEMIDEUS
+  PJ_EL_CALZE_DELS_DEUS
