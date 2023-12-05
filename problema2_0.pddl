@@ -150,7 +150,7 @@
   
   (:goal
     (and
-      (llegit PJ_El_Calze_Dels_Deus)
+      (llegit HP_I_Les_Reliquies_De_La_Mort)
       (llegit Apunts_ABIA)
     )
   )
