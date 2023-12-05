@@ -12,7 +12,7 @@ Alternativament, es pot executar el fitxer pla.py, que genera el pla amb metricf
 -g (int)  valor de g
 -H (int)  valor de h (h minúscula és help)
 -e (int)  Extensió del problema (0 a 3)
--m (int)  Mida del problema, número de llibres (2 a 26)
+-m (int)  Mida del problema, número de llibres (2 a 260)
 -ll (int) Llavor per generar el problema aleatori (42 per defecte)
 -o (str)  Domini a utilitzar (dominiX.pddl)
 -f (str)  Problema a utilitzar (problemaX.pddl)
@@ -27,7 +27,7 @@ python pla.py -O -e 0 -m 2 -ll 73
 Es pot generar un problema aleatori amb el fitxer generate.py, que genera un problema amb les següents característiques:
 ```python
 -e (int)  Extensió del problema (0 a 3)
--m (int)  Mida del problema, número de llibres (2 a 26)
+-m (int)  Mida del problema, número de llibres (2 a 260)
 -ll (int) Llavor per generar el problema aleatori (42 per defecte)
 ```
 Exemple:
